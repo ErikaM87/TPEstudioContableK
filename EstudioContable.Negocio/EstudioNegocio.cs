@@ -32,7 +32,7 @@ namespace EstudioContable.Negocio
         }
         public List<Empresa> GetListaEmpresa()
         {
-            List<Empresa> list = _empresaDatos.Traer(892310);
+            List<Empresa> list = _empresaDatos.TraerTodosEmpresa();
 
             return list;
         }
@@ -53,11 +53,6 @@ namespace EstudioContable.Negocio
 
         #region Métodos que devuelven Objetos
 
-
-     
-
-        
-
         public Categoria TraerCategoria(Categoria categoria)
         {
             // validar cliente no nulo
@@ -77,81 +72,72 @@ namespace EstudioContable.Negocio
 
         public Empleado GetByIdEmpleado(int idEmpleado)
         {
-            Empleado empleado = new Empleado();
-            List<Empleado> empleados = _empleadoDatos.TraerTodos();
-            foreach (var item in empleados)
+
+            foreach (var item in GetListaEmpleados())
             {
                 if (idEmpleado == item._id)
-                    empleado = item;
+                    return item;
+
             }
 
-               return empleado;
+            return null;
         }
         public Empleado GetEmpleadoByIdEmpresa(int idEmpresa)
         {
-            Empleado empleado = new Empleado();
+           
             foreach (var item in GetListaEmpleados())
             {
                 if (idEmpresa == item._id)
                     return item;
-                empleado = item;
             }
 
-            return empleado;
+            return null;
         }
         public Empresa GetByIdEmpresa(int idEmpresa)
         {
-            Empresa empresa = new Empresa();
+            
             foreach (var item in GetListaEmpresa())
             {
                 if (idEmpresa == item._id)
                     return item;
-                empresa = item;
+            
             }
 
-            return empresa;
+            return null;
         }
         public Categoria GetByIdCategoria(int idCategoria)
         {
-            Categoria categoria = new Categoria();
+           
             foreach (var item in GetListaCategoria())
             {
                 if (idCategoria == item._id)
                     return item;
-                categoria = item;
+                
             }
 
-            return categoria;
+            return null;
         }
 
         public Liquidacion GetByIdLiquidacion(int idLiquidacion)
         {
-            Liquidacion liquidacion = new Liquidacion();
+           
             foreach (var item in GetListaLiquidacion())
             {
                 if (idLiquidacion == item._id)
                     return item;
-                liquidacion = item;
+                
             }
 
-            return liquidacion;
+            return null;
         }
 
 
         #endregion
 
         #region Métodos de Altas
-        public void AltaEmpleado(int id, int idCategoria, int idEmpresa, string nombre, string apellido, int cuil, DateTime fnac, DateTime fechaAlta)
+        public void AltaEmpleado(int id, int idCategoria, int idEmpresa, string nombre, string apellido, int cuil, DateTime fnac, DateTime fechaAlta, bool activo)
         {
-            Empleado empleado = new Empleado();
-            empleado._id = id;
-            empleado._idCategoria = idCategoria;
-            empleado._idEmpresa = idEmpresa;
-            empleado._cuil = cuil;
-            empleado._nombre = nombre;
-            empleado._apellido = apellido;
-            empleado._fechaNacimiento = fnac;
-            empleado._fechaAlta = fechaAlta;
+            Empleado empleado = new Empleado(id,idEmpresa,nombre,apellido, idCategoria, cuil,fnac,fechaAlta, true);
 
 
             TransactionResult transaction = _empleadoDatos.Insertar(empleado);
@@ -163,13 +149,7 @@ namespace EstudioContable.Negocio
         }
         public void AltaEmpresa(string razonSocial, int cuit, string domicilio, DateTime fechaAlta, int usuario, int id)
         {
-            Empresa empresa = new Empresa();
-            empresa._razonSocial = razonSocial;
-            empresa._cuit = cuit;
-            empresa._domicilio = domicilio;
-            empresa._fechaAlta = fechaAlta;
-            empresa._usuario = usuario;
-            empresa._id = id;
+            Empresa empresa = new Empresa(razonSocial,cuit,domicilio,fechaAlta,usuario,id);
 
             TransactionResult transaction = _empresaDatos.InsertarEmpresa(empresa);
 
@@ -182,11 +162,8 @@ namespace EstudioContable.Negocio
 
         public void AltaCategoria(string nombre, string convenio, double sueldoBasico, int id)
         {
-            Categoria categoria = new Categoria();
-            categoria._nombre = nombre;
-            categoria._convenio = convenio;
-            categoria._sueldoBasico = sueldoBasico;
-            categoria._id = id;
+            Categoria categoria = new Categoria(nombre, convenio, sueldoBasico, id);
+           
 
             TransactionResult transaction = _categoriaDatos.InsertarCategoria(categoria);
 
@@ -198,13 +175,7 @@ namespace EstudioContable.Negocio
                        
         public void AltaLiquidacion(int idEmpleado, int periodo, string codigoTransferencia, double bruto, double descuentos, int id, DateTime fechaAlta)
         {
-            Liquidacion liquidacion = new Liquidacion();
-            liquidacion._idEmpleado = idEmpleado;
-            liquidacion._periodo = periodo;
-            liquidacion._codigoTransferencia = codigoTransferencia;
-            liquidacion._bruto = bruto;
-            liquidacion._descuentos = descuentos;
-            liquidacion._fechaAlta = fechaAlta;
+            Liquidacion liquidacion = new Liquidacion(id, idEmpleado, codigoTransferencia, periodo, bruto,descuentos,fechaAlta);
 
 
             liquidacion._id = id;

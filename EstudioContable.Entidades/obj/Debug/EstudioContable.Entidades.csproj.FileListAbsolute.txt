@@ -32,3 +32,12 @@ C:\Users\ery_m\Desktop\GITHUB-TP\TpEstudioContable\EstudioContable.Entidades\obj
 C:\Users\ery_m\Desktop\GITHUB-TP\TpEstudioContable\EstudioContable.Entidades\obj\Debug\EstudioContable.Entidades.csproj.CopyComplete
 C:\Users\ery_m\Desktop\GITHUB-TP\TpEstudioContable\EstudioContable.Entidades\obj\Debug\EstudioContable.Entidades.dll
 C:\Users\ery_m\Desktop\GITHUB-TP\TpEstudioContable\EstudioContable.Entidades\obj\Debug\EstudioContable.Entidades.pdb
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Entidades\bin\Debug\EstudioContable.Entidades.dll
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Entidades\bin\Debug\EstudioContable.Entidades.pdb
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Entidades\bin\Debug\Newtonsoft.Json.dll
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Entidades\bin\Debug\Newtonsoft.Json.xml
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Entidades\obj\Debug\EstudioContable.Entidades.csproj.AssemblyReference.cache
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Entidades\obj\Debug\EstudioContable.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Entidades\obj\Debug\EstudioContable.Entidades.csproj.CopyComplete
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Entidades\obj\Debug\EstudioContable.Entidades.dll
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Entidades\obj\Debug\EstudioContable.Entidades.pdb

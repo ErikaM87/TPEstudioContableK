@@ -71,9 +71,8 @@ namespace EstudioContable.AccesoDatos
             n.Add("Periodo", liquidacion._periodo.ToString());
             n.Add("CodigoTransferencia", liquidacion._codigoTransferencia.ToString());
             n.Add("Bruto", liquidacion._bruto.ToString());
-            n.Add("Descuentos", liquidacion._descuentos.ToString());
-
-            n.Add("FechaAlta", liquidacion._fechaAlta.ToString());
+            n.Add("Descuentos", liquidacion._descuentos.ToString("yyyy-MM-dd"));
+            n.Add("FechaAlta", liquidacion._fechaAlta.ToString("yyyy-MM-dd"));
             n.Add("id", liquidacion._id.ToString());
 
             return n;

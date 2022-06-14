@@ -37,7 +37,7 @@ namespace EstudioContable.interfazForm
                 DateTime fechaNacimiento = Convert.ToDateTime(_txtFechaNacimiento.Text);
                 DateTime fechaAlta = Convert.ToDateTime(_txtFechaAlta.Text);
 
-                _estudioNegocio.AltaEmpleado(id, idCategoria, idEmpresa, nombre, apellido, cuil, fechaNacimiento, fechaAlta);
+                _estudioNegocio.AltaEmpleado(id, idCategoria, idEmpresa, nombre, apellido, cuil, fechaNacimiento, fechaAlta,true);
 
                 MessageBox.Show("Alta Generada con éxito");
             }

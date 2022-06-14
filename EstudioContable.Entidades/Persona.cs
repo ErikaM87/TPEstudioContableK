@@ -15,6 +15,16 @@ namespace EstudioContable.Entidades
         public long _telefono;
         public string _mail;
 
+        public Persona(int id, string nombre, string apellido)
+        {
+            _id = id;
+            _nombre = nombre;
+            _apellido = apellido;
+          
+        }
+
+
+
         //public int Id { get => _id; set => _id = value; }
         //public string Nombre { get => _nombre; set => _nombre = value; }
         //public string Apellido { get => _apellido; set => _apellido = value; }

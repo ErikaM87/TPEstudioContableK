@@ -13,21 +13,21 @@ namespace EstudioContable.Entidades
         public string _convenio;
         public double _sueldoBasico;
 
-        public Categoria()
-        {
-        }
+     
 
-        public Categoria(int id, string nombre, string convenio, double sueldoBasico)
+        public Categoria( string nombre, string convenio, double sueldoBasico, int id)
         {
-            _id = id;
+            
             _nombre = nombre;
             _convenio = convenio;
             _sueldoBasico = sueldoBasico;
+            _id = id;
         }
 
         public override string ToString()
         {
-            return _nombre + " " + _convenio + " " + _sueldoBasico.ToString() + " " + _id.ToString();
+            return "ID: "  +_id.ToString() + " " + "\r\n"   +"NOMBRE:"
+                 + " " +_nombre;
         }
 
         //public int id { get => _id; set => _id = value }

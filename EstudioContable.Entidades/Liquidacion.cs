@@ -16,9 +16,7 @@ namespace EstudioContable.Entidades
         public double _descuentos;
         public DateTime _fechaAlta;
 
-        public Liquidacion()
-        {
-        }
+        
 
         public Liquidacion(int id, int idEmpleado, string codigoTransferencia, int periodo, double bruto, double descuentos, DateTime fechaAlta)
         {
@@ -46,8 +44,10 @@ namespace EstudioContable.Entidades
 
         public override string ToString()
         {
-            return _idEmpleado + " " + _periodo + " " + _codigoTransferencia + " " + _bruto.ToString() + " "
-                + _descuentos.ToString() + " " + _fechaAlta.ToString() + " " + _id.ToString();
+            return "ID: " + _id.ToString() + " " + "\r\n"
+                + "ID EMPLEADO: " + _idEmpleado.ToString() + " " + "\r\n" +
+                "BRUTO: " + _bruto.ToString() + " " + "\r\n" + 
+                "DESCUENTOS: " + _descuentos.ToString();
         }
     }
 }

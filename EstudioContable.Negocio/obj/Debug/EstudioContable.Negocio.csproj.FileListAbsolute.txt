@@ -48,3 +48,16 @@ C:\Users\ery_m\Desktop\GITHUB-TP\TpEstudioContable\EstudioContable.Negocio\obj\D
 C:\Users\ery_m\Desktop\GITHUB-TP\TpEstudioContable\EstudioContable.Negocio\obj\Debug\EstudioContable.Negocio.csproj.CopyComplete
 C:\Users\ery_m\Desktop\GITHUB-TP\TpEstudioContable\EstudioContable.Negocio\obj\Debug\EstudioContable.Negocio.dll
 C:\Users\ery_m\Desktop\GITHUB-TP\TpEstudioContable\EstudioContable.Negocio\obj\Debug\EstudioContable.Negocio.pdb
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Negocio\bin\Debug\EstudioContable.Negocio.dll
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Negocio\bin\Debug\EstudioContable.Negocio.pdb
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Negocio\bin\Debug\EstudioContable.AccesoDatos.dll
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Negocio\bin\Debug\EstudioContable.Entidades.dll
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Negocio\bin\Debug\Newtonsoft.Json.dll
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Negocio\bin\Debug\EstudioContable.AccesoDatos.pdb
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Negocio\bin\Debug\EstudioContable.Entidades.pdb
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Negocio\bin\Debug\Newtonsoft.Json.xml
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Negocio\obj\Debug\EstudioContable.Negocio.csproj.AssemblyReference.cache
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Negocio\obj\Debug\EstudioContable.Negocio.csproj.CoreCompileInputs.cache
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Negocio\obj\Debug\EstudioContable.Negocio.csproj.CopyComplete
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Negocio\obj\Debug\EstudioContable.Negocio.dll
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.Negocio\obj\Debug\EstudioContable.Negocio.pdb

@@ -8,31 +8,30 @@ namespace EstudioContable.Entidades
 {
     public class Empleado : Persona
     {
-        public int _id;
+   
         public int _idEmpresa;
         public int _idCategoria;
-        public int _cuil;
+        public long _cuil;
         public DateTime _fechaNacimiento;
         public DateTime _fechaAlta;
+        public bool _activo;
 
-        public Empleado()
+        public Empleado(int id, int idEmpresa,string nombre,string apellido, int idCategoria, long cuil, DateTime fechaNacimiento, DateTime fechaAlta, bool activo) :  base (id,  nombre,  apellido )
         {
-        }
-
-        public Empleado(int id, int idEmpresa, int idCategoria, int cuil, DateTime fechaNacimiento, DateTime fechaAlta)
-        {
-            _id = id;
             _idEmpresa = idEmpresa;
             _idCategoria = idCategoria;
             _cuil = cuil;
             _fechaNacimiento = fechaNacimiento;
             _fechaAlta = fechaAlta;
+            _activo = activo;
         }
 
         public override string ToString()
         {
-            return  _idCategoria.ToString() + " " +_idEmpresa.ToString() + " " + _cuil.ToString() + " " + _nombre + " " + _apellido + " " + 
-                 _fechaNacimiento.ToString() + " " + _fechaAlta.ToString() + " " + _id.ToString();
+            return "ID: " +_id.ToString()+ "\r\n" +
+                "NOMBRE: " + _nombre + "\r\n"  + 
+                "APELLIDO " + _apellido + "\r\n"  +
+                "FECHA DE ALTA:  " + _fechaAlta.ToString("dd - MM - yyyy");
             
                
         }

@@ -25,6 +25,7 @@ namespace EstudioContable.interfazForm
         private void FrmReportes_Load(object sender, EventArgs e)
         {
            MostarEmpresas();
+           MostrarCategorias();
         }
 
         public void CargarListas()
@@ -39,6 +40,21 @@ namespace EstudioContable.interfazForm
             _lstCategorias.DataSource = lstCategoria;
 
 
+        }
+
+        public void MostrarCategorias()
+        {
+            try
+            {
+                List<Categoria> listadoCategorias = _estudioNegocio.GetListaCategoria();
+                _lstCategorias.DataSource = null;
+                _lstCategorias.DataSource = listadoCategorias;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al traer clientes: " + ex.Message);
+            }
         }
 
         public void MostarEmpresas()

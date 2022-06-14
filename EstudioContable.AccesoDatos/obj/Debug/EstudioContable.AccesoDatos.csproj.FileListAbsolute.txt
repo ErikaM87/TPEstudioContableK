@@ -40,3 +40,14 @@ C:\Users\ery_m\Desktop\GITHUB-TP\TpEstudioContable\EstudioContable.AccesoDatos\o
 C:\Users\ery_m\Desktop\GITHUB-TP\TpEstudioContable\EstudioContable.AccesoDatos\obj\Debug\EstudioContable.AccesoDatos.csproj.CopyComplete
 C:\Users\ery_m\Desktop\GITHUB-TP\TpEstudioContable\EstudioContable.AccesoDatos\obj\Debug\EstudioContable.AccesoDatos.dll
 C:\Users\ery_m\Desktop\GITHUB-TP\TpEstudioContable\EstudioContable.AccesoDatos\obj\Debug\EstudioContable.AccesoDatos.pdb
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.AccesoDatos\bin\Debug\EstudioContable.AccesoDatos.dll
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.AccesoDatos\bin\Debug\EstudioContable.AccesoDatos.pdb
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.AccesoDatos\bin\Debug\EstudioContable.Entidades.dll
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.AccesoDatos\bin\Debug\Newtonsoft.Json.dll
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.AccesoDatos\bin\Debug\EstudioContable.Entidades.pdb
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.AccesoDatos\bin\Debug\Newtonsoft.Json.xml
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.AccesoDatos\obj\Debug\EstudioContable.AccesoDatos.csproj.AssemblyReference.cache
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.AccesoDatos\obj\Debug\EstudioContable.AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.AccesoDatos\obj\Debug\EstudioContable.AccesoDatos.csproj.CopyComplete
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.AccesoDatos\obj\Debug\EstudioContable.AccesoDatos.dll
+C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.AccesoDatos\obj\Debug\EstudioContable.AccesoDatos.pdb

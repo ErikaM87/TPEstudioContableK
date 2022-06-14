@@ -22,9 +22,9 @@ namespace EstudioContable.AccesoDatos
             return resultado;
         }
 
-        public List<Empresa> Traer(int registro)
+        public List<Empresa> Traer(int usuario)
         {
-            string json2 = WebHelper.Get("EstudioContable/Empresas/" + registro.ToString()); // trae un texto en formato json de una web
+            string json2 = WebHelper.Get("EstudioContable/Empresas/" + usuario.ToString()); // trae un texto en formato json de una web
             List<Empresa> resultado = MapList(json2);
             return resultado;
         }
@@ -71,12 +71,11 @@ namespace EstudioContable.AccesoDatos
         {
             NameValueCollection n = new NameValueCollection();
 
-            n.Add("razonSocial", empresa._razonSocial);
-            n.Add("cuit", empresa._cuit.ToString());
-            n.Add("domicilio", empresa._domicilio);
-            n.Add("fechaAlta", empresa._fechaAlta.ToString());
-            n.Add("usuario", empresa._usuario.ToString());
-            n.Add("id", empresa._id.ToString());
+            n.Add("_razonSocial", empresa._razonSocial);
+            n.Add("_cuit", empresa._cuit.ToString());
+            n.Add("_domicilio", empresa._domicilio);
+            n.Add("_fechaAlta", empresa._fechaAlta.ToString());
+            n.Add("_id", empresa._id.ToString());
             n.Add("Usuario", "892310");
 
             return n;
