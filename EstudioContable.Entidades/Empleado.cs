@@ -28,9 +28,9 @@ namespace EstudioContable.Entidades
 
         public override string ToString()
         {
-            return "ID: " +_id.ToString()+ "\r\n" +
-                "NOMBRE: " + _nombre + "\r\n"  + 
-                "APELLIDO " + _apellido + "\r\n"  +
+            return "ID: " +_id.ToString()+ "  " +
+                "NOMBRE: " + _nombre + "  "  + 
+                "APELLIDO " + _apellido + "  "  +
                 "FECHA DE ALTA:  " + _fechaAlta.ToString("dd - MM - yyyy");
             
                

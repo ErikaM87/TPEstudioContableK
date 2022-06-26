@@ -26,8 +26,7 @@ namespace EstudioContable.Entidades
 
         public override string ToString()
         {
-            return "ID: "  +_id.ToString() + " " + "\r\n"   +"NOMBRE:"
-                 + " " +_nombre;
+            return _id.ToString()  + " " + _nombre;
         }
 
         //public int id { get => _id; set => _id = value }

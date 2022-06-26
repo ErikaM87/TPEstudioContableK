@@ -195,28 +195,83 @@ namespace EstudioContable.Negocio
         public List<Empleado> ReporteGetByIdEmpresa(int idEmpresa)
         {
             List<Empleado> empleados = new List<Empleado>();
-            foreach (var item in GetListaEmpleados())
+            List<Empleado> _empleados = GetListaEmpleados();
+            foreach(Empleado e in _empleados)
             {
-                if (idEmpresa == item._idEmpresa)
-
-                    empleados.Add(item);
+                if(idEmpresa == e._idEmpresa)
+                {
+                    empleados.Add(e);
+                    
+                }
             }
-
-            return empleados;
+           if( empleados == null)
+            {
+                throw new Exception();
+            }
+            else
+            {
+                return empleados;
+            }
+           
         }
 
         //REPORTE LIQUIDACION POR CATEGORIA
-        public List<Liquidacion> ReporteGetByIdLiquidacion(int idCategoria)
-        {
-            List<Liquidacion> resultado = new List<Liquidacion>();
-            foreach (var item in GetListaLiquidacion())
-            {
-                if (idCategoria == item._id)
+    
 
-                    resultado.Add(item);
+
+        public List<Empleado> GetEmpleadoByIdCategoria(int idCategoria)
+        {
+            List<Empleado> empleados = new List<Empleado>();
+            List<Empleado> _empleados = GetListaEmpleados();
+            foreach (Empleado e in _empleados)
+            {
+                if (idCategoria == e._idCategoria)
+                {
+                    empleados.Add(e);
+
+                }
+            }
+            if (empleados == null)
+            {
+                throw new Exception();
+            }
+            else
+            {
+                return empleados;
             }
 
-            return resultado;
+        }
+
+        public List<Liquidacion> ReporteGetByIdCategoria(List<Empleado> empleados)
+        {
+            List<Liquidacion> liquidaciones = new List<Liquidacion>();
+            List<Liquidacion> _liquidaciones = GetListaLiquidacion();
+
+            {
+                foreach(Empleado e in empleados)
+                {
+
+                    foreach (Liquidacion l in _liquidaciones)
+                    {
+                        if (e._id == l._idEmpleado)
+                        {
+                            liquidaciones.Add(l);
+
+                        }
+                    }
+                  
+                }
+                if (liquidaciones == null)
+                {
+                    throw new Exception();
+                }
+                else
+                {
+                    return liquidaciones;
+                }
+            }
+
+
         }
         #endregion
 

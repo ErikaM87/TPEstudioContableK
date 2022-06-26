@@ -14,17 +14,49 @@ namespace EstudioContable.interfazForm
 {
     public partial class FrmReporteEmpleados : Form
     {
+        private Empresa _empresa;
         private List<Empleado> _empleados;
-        public EstudioNegocio estudioNegocio;
+        private EstudioNegocio _estudioNegocio;
+       
         public FrmReporteEmpleados(Empresa empresa)
         {
-            _empleados = estudioNegocio.ReporteGetByIdEmpresa(empresa._id);
+            _empresa = empresa;
+            _estudioNegocio = new EstudioNegocio();
+            _empleados = _estudioNegocio.ReporteGetByIdEmpresa(_empresa._id);
             InitializeComponent();
         }
 
+        
+
         private void FrmReporteEmpleados_Load(object sender, EventArgs e)
         {
-            txtReporteEmpleados.Text = _empleados.ToString();
+            MostrarEmpleados();
+          
         }
+
+        public void MostrarEmpleados()
+        {
+            try
+            {
+                _lstEmpleados.DataSource = null;
+               
+
+                if(_empleados != null)
+                {
+                    _lstEmpleados.DataSource = _empleados;
+                }
+                else 
+                {
+                    _lstEmpleados.DataSource = "No se han encontrado empleados pertenecientes a la empresa seleccionada";
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al traer empleados: " + ex.Message);
+            }
+        }
+
+     
     }
 }

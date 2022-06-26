@@ -19,10 +19,11 @@ namespace EstudioContable.Entidades
 
         public override string ToString()
         {
-            return  "RAZÓN SOCIAL: " + _razonSocial +  "\r\n" +
-                "CUIT: " + _cuit ;
+            return  _id + " "  +_razonSocial ;
                 
         }
+
+        
 
         public Empresa(string razonSocial, long cuit, string domicilio, DateTime fechaAlta, int usuario, int id)
         {

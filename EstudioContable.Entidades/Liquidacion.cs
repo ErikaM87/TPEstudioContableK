@@ -44,10 +44,9 @@ namespace EstudioContable.Entidades
 
         public override string ToString()
         {
-            return "ID: " + _id.ToString() + " " + "\r\n"
-                + "ID EMPLEADO: " + _idEmpleado.ToString() + " " + "\r\n" +
-                "BRUTO: " + _bruto.ToString() + " " + "\r\n" + 
-                "DESCUENTOS: " + _descuentos.ToString();
+            return "ID EMPLEADO: " + _idEmpleado.ToString() + "  "  +
+                "BRUTO: $" + _bruto.ToString() + "  " + 
+                "DESCUENTOS: $" + _descuentos.ToString();
         }
     }
 }

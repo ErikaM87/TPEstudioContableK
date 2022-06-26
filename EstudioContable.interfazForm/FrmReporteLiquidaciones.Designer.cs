@@ -29,17 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReporteLiquidaciones));
-            this.txtReporteLiquidaciones = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this._lstLiquidaciones = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtReporteLiquidaciones
-            // 
-            this.txtReporteLiquidaciones.Location = new System.Drawing.Point(73, 72);
-            this.txtReporteLiquidaciones.Name = "txtReporteLiquidaciones";
-            this.txtReporteLiquidaciones.Size = new System.Drawing.Size(313, 22);
-            this.txtReporteLiquidaciones.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -50,27 +43,34 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // _lstLiquidaciones
+            // 
+            this._lstLiquidaciones.FormattingEnabled = true;
+            this._lstLiquidaciones.ItemHeight = 15;
+            this._lstLiquidaciones.Location = new System.Drawing.Point(73, 109);
+            this._lstLiquidaciones.Name = "_lstLiquidaciones";
+            this._lstLiquidaciones.Size = new System.Drawing.Size(415, 259);
+            this._lstLiquidaciones.TabIndex = 2;
+            // 
             // FrmReporteLiquidaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(805, 505);
+            this.Controls.Add(this._lstLiquidaciones);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.txtReporteLiquidaciones);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FrmReporteLiquidaciones";
             this.Text = "Reporte de Liquidaciones";
             this.Load += new System.EventHandler(this.FrmReporteLiquidaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtReporteLiquidaciones;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ListBox _lstLiquidaciones;
     }
 }
