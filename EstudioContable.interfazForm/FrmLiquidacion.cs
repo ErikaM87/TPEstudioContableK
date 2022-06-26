@@ -49,15 +49,15 @@ namespace EstudioContable.interfazForm
         {
             try
             {
-                int id = Convert.ToInt32(_txtId.Text);
+               
                 int idEmpleado = Convert.ToInt32(_txtIdEmpleado.Text);
                 int periodo = Convert.ToInt32(_txtPeriodo.Text);
                 string codigoTransferencia = _txtCodigoTransferencia.Text;
-                double bruto = Convert.ToInt32(_txtBruto.Text);
-                double descuentos = Convert.ToInt32(_txtDescuentos.Text);
+                double bruto = Convert.ToDouble(_txtBruto.Text);
+                double descuentos = Convert.ToDouble(_txtDescuentos.Text);
                 DateTime fechaAlta = Convert.ToDateTime(_txtFechaAlta.Text) ;
-
-                _estudioNegocio.AltaLiquidacion( idEmpleado, periodo, codigoTransferencia, bruto, descuentos, id, fechaAlta);
+                int id = Convert.ToInt32(_txtId.Text);
+                _estudioNegocio.AltaLiquidacion( idEmpleado, periodo, codigoTransferencia, bruto, descuentos, fechaAlta,id);
 
                 MessageBox.Show("Alta Generada con éxito");
             }
@@ -72,6 +72,11 @@ namespace EstudioContable.interfazForm
         {
             this.Owner.Show();
             this.Close();
+        }
+
+        private void FrmLiquidacion_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

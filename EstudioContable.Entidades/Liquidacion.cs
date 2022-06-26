@@ -18,15 +18,16 @@ namespace EstudioContable.Entidades
 
         
 
-        public Liquidacion(int id, int idEmpleado, string codigoTransferencia, int periodo, double bruto, double descuentos, DateTime fechaAlta)
+        public Liquidacion(int idEmpleado, int periodo, string codigoTransferencia,  double bruto, double descuentos, DateTime fechaAlta,int id)
         {
-            _id = id;
-            _idEmpleado = idEmpleado;
-            _codigoTransferencia = codigoTransferencia;
+           
+            _idEmpleado = idEmpleado;          
             _periodo = periodo;
+            _codigoTransferencia = codigoTransferencia;
             _bruto = bruto;
             _descuentos = descuentos;
             _fechaAlta = fechaAlta;
+            _id = id;
         }
 
 

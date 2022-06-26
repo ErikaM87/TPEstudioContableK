@@ -40,9 +40,9 @@ namespace EstudioContable.AccesoDatos
             return lst;
         }
 
-        public TransactionResult InsertarLiquidacion(Liquidacion Liquidacion)
+        public TransactionResult InsertarLiquidacion(Liquidacion liquidacion)
         {
-            NameValueCollection obj = ReverseMapLiquidacion(Liquidacion); //serializacion -> json
+            NameValueCollection obj = ReverseMapLiquidacion(liquidacion); //serializacion -> json
 
             string json = WebHelper.Post("EstudioContable/Liquidacion", obj);
 
@@ -52,9 +52,9 @@ namespace EstudioContable.AccesoDatos
         }
 
 
-        public TransactionResult Actualizar(Liquidacion Liquidacion)
+        public TransactionResult Actualizar(Liquidacion liquidacion)
         {
-            NameValueCollection obj = ReverseMapLiquidacion(Liquidacion);
+            NameValueCollection obj = ReverseMapLiquidacion(liquidacion);
 
             string json = WebHelper.Put("EstudioContable/Liquidacion", obj);
 
@@ -68,11 +68,11 @@ namespace EstudioContable.AccesoDatos
             NameValueCollection n = new NameValueCollection();
 
             n.Add("idEmpleado", liquidacion._idEmpleado.ToString());
-            n.Add("Periodo", liquidacion._periodo.ToString());
-            n.Add("CodigoTransferencia", liquidacion._codigoTransferencia.ToString());
-            n.Add("Bruto", liquidacion._bruto.ToString());
-            n.Add("Descuentos", liquidacion._descuentos.ToString("yyyy-MM-dd"));
-            n.Add("FechaAlta", liquidacion._fechaAlta.ToString("yyyy-MM-dd"));
+            n.Add("periodo", liquidacion._periodo.ToString());
+            n.Add("codigoTransferencia", liquidacion._codigoTransferencia.ToString());
+            n.Add("bruto", liquidacion._bruto.ToString());
+            n.Add("descuentos", liquidacion._descuentos.ToString("yyyy-MM-dd"));
+            n.Add("fechaAlta", liquidacion._fechaAlta.ToString("yyyy-MM-dd"));
             n.Add("id", liquidacion._id.ToString());
 
             return n;

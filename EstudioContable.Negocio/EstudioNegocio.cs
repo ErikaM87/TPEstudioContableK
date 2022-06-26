@@ -173,15 +173,12 @@ namespace EstudioContable.Negocio
 
         }
                        
-        public void AltaLiquidacion(int idEmpleado, int periodo, string codigoTransferencia, double bruto, double descuentos, int id, DateTime fechaAlta)
+        public void AltaLiquidacion(int idEmpleado, int periodo, string codigoTransferencia, double bruto, double descuentos, DateTime fechaAlta, int id)
         {
-            Liquidacion liquidacion = new Liquidacion(id, idEmpleado, codigoTransferencia, periodo, bruto,descuentos,fechaAlta);
+            Liquidacion liquidacion = new Liquidacion(idEmpleado, periodo, codigoTransferencia, bruto, descuentos,fechaAlta, id);
 
-
-            liquidacion._id = id;
 
             TransactionResult transaction = _liquidacionDatos.InsertarLiquidacion(liquidacion);
-
 
 
             if (!transaction.IsOk)
