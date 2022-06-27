@@ -122,5 +122,32 @@ namespace EstudioContable.interfazForm
             }
 
         }
+
+        private void _txtBruto_TextChanged(object sender, EventArgs e)
+        {
+            if (!Regex.IsMatch(_txtBruto.Text, @"^[0-9]+$"))
+            {
+                MessageBox.Show("Debe ingresar números en este campo.");
+                _txtBruto.Text = string.Empty;
+            }
+        }
+
+        private void _txtDescuentos_TextChanged(object sender, EventArgs e)
+        {
+            if (!Regex.IsMatch(_txtDescuentos.Text, @"^[0-9]+$"))
+            {
+                MessageBox.Show("Debe ingresar números en este campo.");
+                _txtDescuentos.Text = string.Empty;
+            }
+        }
+
+        private void _txtPeriodo_TextChanged(object sender, EventArgs e)
+        {
+            if (!Regex.IsMatch(_txtPeriodo.Text, @"^[0-9]+$"))
+            {
+                MessageBox.Show("Debe ingresar números en este campo.");
+                _txtPeriodo.Text = string.Empty;
+            }
+        }
     }
 }

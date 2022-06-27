@@ -107,6 +107,7 @@
             this._txtPeriodo.Name = "_txtPeriodo";
             this._txtPeriodo.Size = new System.Drawing.Size(116, 22);
             this._txtPeriodo.TabIndex = 5;
+            this._txtPeriodo.TextChanged += new System.EventHandler(this._txtPeriodo_TextChanged);
             // 
             // _txtBruto
             // 
@@ -114,6 +115,7 @@
             this._txtBruto.Name = "_txtBruto";
             this._txtBruto.Size = new System.Drawing.Size(116, 22);
             this._txtBruto.TabIndex = 6;
+            this._txtBruto.TextChanged += new System.EventHandler(this._txtBruto_TextChanged);
             // 
             // _txtCodigoTransferencia
             // 
@@ -135,6 +137,7 @@
             this._txtDescuentos.Name = "_txtDescuentos";
             this._txtDescuentos.Size = new System.Drawing.Size(116, 22);
             this._txtDescuentos.TabIndex = 9;
+            this._txtDescuentos.TextChanged += new System.EventHandler(this._txtDescuentos_TextChanged);
             // 
             // lblIdEmpleado
             // 
