@@ -57,18 +57,27 @@ namespace EstudioContable.interfazForm
             {
                 if (EsValido())
                 {
-                    int id = Convert.ToInt32(_txtId.Text);
-                    string razonSocial = _txtRazonSocial.Text;
-                    int cuit = Convert.ToInt32(_txtCuit.Text);
-                    string domicilio = _txtDomicilio.Text;
-                    DateTime fechaAlta = Convert.ToDateTime(_txtFechaAlta.Text);
-                    int usuario = Convert.ToInt32(_txtUsuario.Text);
+                    if (!_estudioNegocio.ValidarEmpresaExistente(Convert.ToInt32(_txtId.Text)))
+                    {
+                        int id = Convert.ToInt32(_txtId.Text);
+                        string razonSocial = _txtRazonSocial.Text;
+                        int cuit = Convert.ToInt32(_txtCuit.Text);
+                        string domicilio = _txtDomicilio.Text;
+                        DateTime fechaAlta = Convert.ToDateTime(_txtFechaAlta.Text);
+                        int usuario = Convert.ToInt32(_txtUsuario.Text);
 
 
-                    _estudioNegocio.AltaEmpresa(razonSocial, cuit, domicilio, fechaAlta, usuario, id);
+                        _estudioNegocio.AltaEmpresa(razonSocial, cuit, domicilio, fechaAlta, usuario, id);
 
-                    MessageBox.Show("Alta Generada con éxito");
-                    limpiarCampos();
+                        MessageBox.Show("Alta Generada con éxito");
+                        limpiarCampos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ingresado un Id de Empresa que ya existe.");
+                        _txtId.Text = string.Empty;
+
+                    }
                 }
                 else
                 {

@@ -54,16 +54,24 @@ namespace EstudioContable.interfazForm
             {
                 if (EsValido())
                 {
-                    string nombre = _txtNombre.Text;
-                    string convenio = _txtConvenio.Text;
-                    double sueldoBasico = Convert.ToInt32(_txtSueldoBasico.Text);
-                    int id = Convert.ToInt32(_txtId.Text);
+                    if (!_estudioNegocio.ValidarCategoriaExistente(Convert.ToInt32(_txtId.Text)))
+                    {
+                        string nombre = _txtNombre.Text;
+                        string convenio = _txtConvenio.Text;
+                        double sueldoBasico = Convert.ToInt32(_txtSueldoBasico.Text);
+                        int id = Convert.ToInt32(_txtId.Text);
 
 
-                    _estudioNegocio.AltaCategoria(nombre, convenio, sueldoBasico, id);
+                        _estudioNegocio.AltaCategoria(nombre, convenio, sueldoBasico, id);
 
-                    MessageBox.Show("Alta Generada con éxito");
-                    limpiarCampos();
+                        MessageBox.Show("Alta Generada con éxito");
+                        limpiarCampos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ingresado un Id de Categoría que ya existe.");
+                        _txtId.Text = string.Empty;
+                    }
                 }
                 else
                 {

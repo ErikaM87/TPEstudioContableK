@@ -32,19 +32,44 @@ namespace EstudioContable.interfazForm
             {
                 if (EsValido())
                 {
-                    int id = Convert.ToInt32(_txtId.Text);
-                    int idCategoria = Convert.ToInt32(_txtIdCategoria.Text);
-                    int idEmpresa = Convert.ToInt32(_txtIdEmpresa.Text);
-                    string nombre = _txtNombre.Text;
-                    string apellido = _txtApellido.Text;
-                    int cuil = Convert.ToInt32(_txtCuil.Text);
-                    DateTime fechaNacimiento = Convert.ToDateTime(_txtFechaNacimiento.Text);
-                    DateTime fechaAlta = Convert.ToDateTime(_txtFechaAlta.Text);
+                    if (!_estudioNegocio.ValidarEmpleadoExistente(Convert.ToInt32(_txtId.Text)))
+                    {
+                        if (_estudioNegocio.ValidarCategoriaExistente(Convert.ToInt32(_txtIdCategoria.Text))) 
+                        {
 
-                    _estudioNegocio.AltaEmpleado(id, idCategoria, idEmpresa, nombre, apellido, cuil, fechaNacimiento, fechaAlta, true);
+                            if (_estudioNegocio.ValidarEmpresaExistente(Convert.ToInt32(_txtIdEmpresa.Text)))
+                            {
+                                int id = Convert.ToInt32(_txtId.Text);
+                                int idCategoria = Convert.ToInt32(_txtIdCategoria.Text);
+                                int idEmpresa = Convert.ToInt32(_txtIdEmpresa.Text);
+                                string nombre = _txtNombre.Text;
+                                string apellido = _txtApellido.Text;
+                                int cuil = Convert.ToInt32(_txtCuil.Text);
+                                DateTime fechaNacimiento = Convert.ToDateTime(_txtFechaNacimiento.Text);
+                                DateTime fechaAlta = Convert.ToDateTime(_txtFechaAlta.Text);
 
-                    MessageBox.Show("Alta Generada con éxito");
-                    limpiarCampos();
+                                _estudioNegocio.AltaEmpleado(id, idCategoria, idEmpresa, nombre, apellido, cuil, fechaNacimiento, fechaAlta, true);
+
+                                MessageBox.Show("Alta Generada con éxito");
+                                limpiarCampos();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Ha ingresado un Id de Empresa inexistente.");
+                                _txtIdEmpresa.Text = string.Empty;
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ha ingresado un Id de Categoria inexistente.");
+                            _txtIdCategoria.Text = string.Empty;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ingresado un Id de Empleado que ya existe.");
+                        _txtId.Text = string.Empty;
+                    }
                 }
                 else
                 {

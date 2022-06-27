@@ -54,17 +54,35 @@ namespace EstudioContable.interfazForm
             {
                if (EsValido())
                 {
-                    int idEmpleado = Convert.ToInt32(_txtIdEmpleado.Text);
-                    int periodo = Convert.ToInt32(_txtPeriodo.Text);
-                    string codigoTransferencia = _txtCodigoTransferencia.Text;
-                    double bruto = Convert.ToDouble(_txtBruto.Text);
-                    double descuentos = Convert.ToDouble(_txtDescuentos.Text);
-                    DateTime fechaAlta = Convert.ToDateTime(_txtFechaAlta.Text);
-                    int id = Convert.ToInt32(_txtId.Text);
-                    _estudioNegocio.AltaLiquidacion(idEmpleado, periodo, codigoTransferencia, bruto, descuentos, fechaAlta, id);
+                    if (!_estudioNegocio.ValidarLiquidacionExistente(Convert.ToInt32(_txtId.Text)))
+                    {
+                        if (_estudioNegocio.ValidarEmpleadoExistente(Convert.ToInt32(_txtIdEmpleado.Text)))
+                        {
+                            int idEmpleado = Convert.ToInt32(_txtIdEmpleado.Text);
+                            int periodo = Convert.ToInt32(_txtPeriodo.Text);
+                            string codigoTransferencia = _txtCodigoTransferencia.Text;
+                            double bruto = Convert.ToDouble(_txtBruto.Text);
+                            double descuentos = Convert.ToDouble(_txtDescuentos.Text);
+                            DateTime fechaAlta = Convert.ToDateTime(_txtFechaAlta.Text);
+                            int id = Convert.ToInt32(_txtId.Text);
+                            _estudioNegocio.AltaLiquidacion(idEmpleado, periodo, codigoTransferencia, bruto, descuentos, fechaAlta, id);
 
-                    MessageBox.Show("Alta Generada con éxito");
-                    limpiarCampos();
+                            MessageBox.Show("Alta Generada con éxito");
+                            limpiarCampos();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ha ingresado un Id de Empleado inexistente.");
+                            _txtIdEmpleado.Text = string.Empty;
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ingresado un Id de Liquidación que ya existe.");
+                        _txtId.Text = string.Empty;
+                    }
+
                 }
                 else
                 {

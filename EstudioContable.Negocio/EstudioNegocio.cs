@@ -272,6 +272,84 @@ namespace EstudioContable.Negocio
         }
         #endregion
 
+        #region Métodos para Validar ID Existente
+        public bool ValidarEmpleadoExistente(int id)
+        {
+            bool resultado = false;
+            List<Empleado> listadoEmpleados = GetListaEmpleados();
+
+            foreach (Empleado emp in listadoEmpleados)
+            {
+                if (emp._id == id)
+                {
+                    resultado = true;
+                    break;
+                }
+                else
+                {
+                    resultado = false;
+                }
+            }
+            return resultado;
+        }
+        public bool ValidarEmpresaExistente(int id)
+        {
+            bool resultado = false;
+            List<Empresa> listadoEmpresas = GetListaEmpresa();
+
+            foreach (Empresa emp in listadoEmpresas)
+            {
+                if (emp._id == id)
+                {
+                    resultado = true;
+                    break;
+                }
+                else
+                {
+                    resultado = false;
+                }
+            }
+            return resultado;
+        }
+        public bool ValidarCategoriaExistente(int id)
+        {
+            bool resultado = false;
+            List<Categoria> listadoCategorias = GetListaCategoria();
+
+            foreach (Categoria categoria in listadoCategorias)
+            {
+                if (categoria._id == id)
+                {
+                    resultado = true;
+                    break;
+                }
+                else
+                {
+                    resultado = false;
+                }
+            }
+            return resultado;
+        }
+        public bool ValidarLiquidacionExistente(int id)
+        {
+            bool resultado = false;
+            List<Liquidacion> listadoLiquidaciones = GetListaLiquidacion();
+
+            foreach (Liquidacion liquidacion in listadoLiquidaciones)
+            {
+                if (liquidacion._id == id)
+                {
+                    resultado = true;
+                    break;
+                }
+                else
+                {
+                    resultado = false;
+                }
+            }
+            return resultado;
+        }
+        #endregion
 
     }
 }
