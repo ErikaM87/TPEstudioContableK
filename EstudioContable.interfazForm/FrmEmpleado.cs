@@ -16,6 +16,7 @@ namespace EstudioContable.interfazForm
     public partial class FrmEmpleado : Form
     {
         private EstudioNegocio _estudioNegocio;
+        Validador validador = new Validador();
         public FrmEmpleado(Form padre)
         {
             InitializeComponent();
@@ -121,39 +122,42 @@ namespace EstudioContable.interfazForm
         }
         private void _txtId_TextChanged(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(_txtId.Text, @"^[0-9]+$"))
-            {
-                MessageBox.Show("Debe ingresar un número de Id.");
-                limpiarCampos();
-            }
+            validador.ValidarCampoId(_txtId);
+        }
 
+        private void _txtIdCategoria_TextChanged(object sender, EventArgs e)
+        {
+            validador.ValidarCampoId(_txtIdCategoria);
+        }
+
+        private void _txtIdEmpresa_TextChanged(object sender, EventArgs e)
+        {
+            validador.ValidarCampoId(_txtIdCategoria);
         }
 
         private void _txtCuil_TextChanged(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(_txtCuil.Text, @"^[0-9]+$"))
-            {
-                MessageBox.Show("Debe ingresar números en este campo.");
-                _txtCuil.Text = string.Empty;
-            }
+            validador.ValidarCampoNumerico(_txtCuil);
         }
 
         private void _txtNombre_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(_txtNombre.Text, @"^[0-9]+$"))
-            {
-                MessageBox.Show("Debe ingresar letras en este campo.");
-                _txtNombre.Text = string.Empty;
-            }
+            validador.ValidarCampoString(_txtNombre);
         }
 
         private void _txtApellido_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(_txtApellido.Text, @"^[0-9]+$"))
-            {
-                MessageBox.Show("Debe ingresar letras en este campo.");
-                _txtApellido.Text = string.Empty;
-            }
+            validador.ValidarCampoString(_txtApellido);
+        }
+
+        private void _txtFechaNacimiento_Validated(object sender, EventArgs e)
+        {
+            validador.ValidarFecha(_txtFechaNacimiento);
+        }
+
+        private void _txtFechaAlta_Validated(object sender, EventArgs e)
+        {
+            validador.ValidarFecha(_txtFechaAlta);
         }
     }
 }

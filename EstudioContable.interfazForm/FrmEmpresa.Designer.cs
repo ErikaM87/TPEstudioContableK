@@ -90,6 +90,7 @@
             this._txtFechaAlta.Name = "_txtFechaAlta";
             this._txtFechaAlta.Size = new System.Drawing.Size(139, 20);
             this._txtFechaAlta.TabIndex = 4;
+            this._txtFechaAlta.Validated += new System.EventHandler(this._txtFechaAlta_Validated);
             // 
             // _txtId
             // 
@@ -105,6 +106,7 @@
             this._txtUsuario.Name = "_txtUsuario";
             this._txtUsuario.Size = new System.Drawing.Size(139, 20);
             this._txtUsuario.TabIndex = 6;
+            this._txtUsuario.TextChanged += new System.EventHandler(this._txtUsuario_TextChanged);
             // 
             // lblRazonSocial
             // 

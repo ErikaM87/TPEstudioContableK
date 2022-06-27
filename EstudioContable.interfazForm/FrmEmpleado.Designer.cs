@@ -72,7 +72,7 @@
             this._txtIdCategoria.Name = "_txtIdCategoria";
             this._txtIdCategoria.Size = new System.Drawing.Size(116, 22);
             this._txtIdCategoria.TabIndex = 1;
-            this._txtIdCategoria.TextChanged += new System.EventHandler(this._txtId_TextChanged);
+            this._txtIdCategoria.TextChanged += new System.EventHandler(this._txtIdCategoria_TextChanged);
             // 
             // _txtIdEmpresa
             // 
@@ -80,7 +80,7 @@
             this._txtIdEmpresa.Name = "_txtIdEmpresa";
             this._txtIdEmpresa.Size = new System.Drawing.Size(116, 22);
             this._txtIdEmpresa.TabIndex = 2;
-            this._txtIdEmpresa.TextChanged += new System.EventHandler(this._txtId_TextChanged);
+            this._txtIdEmpresa.TextChanged += new System.EventHandler(this._txtIdEmpresa_TextChanged);
             // 
             // _txtCuil
             // 
@@ -142,6 +142,7 @@
             this._txtFechaAlta.Name = "_txtFechaAlta";
             this._txtFechaAlta.Size = new System.Drawing.Size(116, 22);
             this._txtFechaAlta.TabIndex = 9;
+            this._txtFechaAlta.Validated += new System.EventHandler(this._txtFechaAlta_Validated);
             // 
             // _txtFechaNacimiento
             // 
@@ -149,6 +150,7 @@
             this._txtFechaNacimiento.Name = "_txtFechaNacimiento";
             this._txtFechaNacimiento.Size = new System.Drawing.Size(116, 22);
             this._txtFechaNacimiento.TabIndex = 10;
+            this._txtFechaNacimiento.Validated += new System.EventHandler(this._txtFechaNacimiento_Validated);
             // 
             // _txtApellido
             // 

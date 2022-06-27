@@ -99,7 +99,7 @@
             this._txtIdEmpleado.Name = "_txtIdEmpleado";
             this._txtIdEmpleado.Size = new System.Drawing.Size(116, 22);
             this._txtIdEmpleado.TabIndex = 4;
-            this._txtIdEmpleado.TextChanged += new System.EventHandler(this._txtId_TextChanged);
+            this._txtIdEmpleado.TextChanged += new System.EventHandler(this._txtIdEmpleado_TextChanged);
             // 
             // _txtPeriodo
             // 
@@ -130,6 +130,7 @@
             this._txtFechaAlta.Name = "_txtFechaAlta";
             this._txtFechaAlta.Size = new System.Drawing.Size(116, 22);
             this._txtFechaAlta.TabIndex = 8;
+            this._txtFechaAlta.Validated += new System.EventHandler(this._txtFechaAlta_Validated);
             // 
             // _txtDescuentos
             // 

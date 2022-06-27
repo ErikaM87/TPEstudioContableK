@@ -16,6 +16,7 @@ namespace EstudioContable.interfazForm
     public partial class FrmEmpresa : Form
     {
         private EstudioNegocio _estudioNegocio;
+        Validador validador = new Validador();
         public FrmEmpresa(Form padre)
         {
             InitializeComponent();
@@ -117,31 +118,29 @@ namespace EstudioContable.interfazForm
         }
         private void _txtId_TextChanged(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(_txtId.Text, @"^[0-9]+$"))
-            {
-                MessageBox.Show("Debe ingresar un número de Id.");
-                _txtId.Text = string.Empty;
-            }
+            validador.ValidarCampoId(_txtId);
 
         }
 
         private void _txtRazonSocial_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(_txtRazonSocial.Text, @"^[0-9]+$"))
-            {
-                MessageBox.Show("Debe ingresar letras en este campo.");
-                _txtRazonSocial.Text = string.Empty;
-            }
+            validador.ValidarCampoString(_txtRazonSocial);
         }
 
         private void _txtCuit_TextChanged(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(_txtCuit.Text, @"^[0-9]+$"))
-            {
-                MessageBox.Show("Debe ingresar números en este campo.");
-                _txtCuit.Text = string.Empty;
-            }
+            validador.ValidarCampoNumerico(_txtCuit);
         }
-        
+
+        private void _txtFechaAlta_Validated(object sender, EventArgs e)
+        {
+            validador.ValidarFecha(_txtFechaAlta);
+        }
+
+        private void _txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            validador.ValidarCampoNumerico(_txtUsuario);
+        }
+
     }
 }

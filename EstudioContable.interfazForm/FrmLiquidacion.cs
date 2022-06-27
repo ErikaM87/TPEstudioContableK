@@ -16,6 +16,7 @@ namespace EstudioContable.interfazForm
     public partial class FrmLiquidacion : Form
     {
         private EstudioNegocio _estudioNegocio;
+        Validador validador = new Validador();
         public FrmLiquidacion(Form padre)
         {
             InitializeComponent();
@@ -115,39 +116,30 @@ namespace EstudioContable.interfazForm
         }
         private void _txtId_TextChanged(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(_txtId.Text, @"^[0-9]+$"))
-            {
-                MessageBox.Show("Debe ingresar un número de Id.");
-                limpiarCampos();
-            }
-
+            validador.ValidarCampoId(_txtId);
+        }
+        private void _txtIdEmpleado_TextChanged(object sender, EventArgs e)
+        {
+            validador.ValidarCampoId(_txtIdEmpleado);
+        }
+        private void _txtPeriodo_TextChanged(object sender, EventArgs e)
+        {
+            validador.ValidarCampoNumerico(_txtPeriodo);
         }
 
         private void _txtBruto_TextChanged(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(_txtBruto.Text, @"^[0-9]+$"))
-            {
-                MessageBox.Show("Debe ingresar números en este campo.");
-                _txtBruto.Text = string.Empty;
-            }
+            validador.ValidarCampoNumerico(_txtBruto);
         }
 
         private void _txtDescuentos_TextChanged(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(_txtDescuentos.Text, @"^[0-9]+$"))
-            {
-                MessageBox.Show("Debe ingresar números en este campo.");
-                _txtDescuentos.Text = string.Empty;
-            }
+            validador.ValidarCampoNumerico(_txtDescuentos);
         }
 
-        private void _txtPeriodo_TextChanged(object sender, EventArgs e)
+        private void _txtFechaAlta_Validated(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(_txtPeriodo.Text, @"^[0-9]+$"))
-            {
-                MessageBox.Show("Debe ingresar números en este campo.");
-                _txtPeriodo.Text = string.Empty;
-            }
+            validador.ValidarFecha(_txtFechaAlta);
         }
     }
 }
