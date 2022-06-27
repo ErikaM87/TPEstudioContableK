@@ -50,16 +50,24 @@ namespace EstudioContable.interfazForm
         {
             try
             {
-                string nombre = _txtNombre.Text;
-                string convenio = _txtConvenio.Text;
-                double sueldoBasico = Convert.ToInt32(_txtSueldoBasico.Text);
-                int id = Convert.ToInt32(_txtId.Text);
+                if (EsValido())
+                {
+                    string nombre = _txtNombre.Text;
+                    string convenio = _txtConvenio.Text;
+                    double sueldoBasico = Convert.ToInt32(_txtSueldoBasico.Text);
+                    int id = Convert.ToInt32(_txtId.Text);
+
+
+                    _estudioNegocio.AltaCategoria(nombre, convenio, sueldoBasico, id);
+
+                    MessageBox.Show("Alta Generada con éxito");
+                    limpiarCampos();
+                }
+                else
+                {
+                    MessageBox.Show("Complete todos los campos");
+                }
                 
-
-                _estudioNegocio.AltaCategoria(nombre, convenio, sueldoBasico, id);
-
-                MessageBox.Show("Alta Generada con éxito");
-                limpiarCampos();
             }
             catch (Exception ex)
             {
@@ -85,6 +93,19 @@ namespace EstudioContable.interfazForm
             _txtNombre.Text = string.Empty;
             _txtConvenio.Text = string.Empty;
             _txtSueldoBasico.Text = string.Empty;
+        }
+        public bool EsValido()
+        {
+            if (string.IsNullOrEmpty(_txtId.Text) || string.IsNullOrEmpty(_txtNombre.Text) || string.IsNullOrEmpty(_txtConvenio.Text)
+                || string.IsNullOrEmpty(_txtSueldoBasico.Text))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
         }
     }
 }

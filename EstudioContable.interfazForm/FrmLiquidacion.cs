@@ -50,18 +50,25 @@ namespace EstudioContable.interfazForm
         {
             try
             {
-               
-                int idEmpleado = Convert.ToInt32(_txtIdEmpleado.Text);
-                int periodo = Convert.ToInt32(_txtPeriodo.Text);
-                string codigoTransferencia = _txtCodigoTransferencia.Text;
-                double bruto = Convert.ToDouble(_txtBruto.Text);
-                double descuentos = Convert.ToDouble(_txtDescuentos.Text);
-                DateTime fechaAlta = Convert.ToDateTime(_txtFechaAlta.Text) ;
-                int id = Convert.ToInt32(_txtId.Text);
-                _estudioNegocio.AltaLiquidacion( idEmpleado, periodo, codigoTransferencia, bruto, descuentos, fechaAlta,id);
+               if (EsValido())
+                {
+                    int idEmpleado = Convert.ToInt32(_txtIdEmpleado.Text);
+                    int periodo = Convert.ToInt32(_txtPeriodo.Text);
+                    string codigoTransferencia = _txtCodigoTransferencia.Text;
+                    double bruto = Convert.ToDouble(_txtBruto.Text);
+                    double descuentos = Convert.ToDouble(_txtDescuentos.Text);
+                    DateTime fechaAlta = Convert.ToDateTime(_txtFechaAlta.Text);
+                    int id = Convert.ToInt32(_txtId.Text);
+                    _estudioNegocio.AltaLiquidacion(idEmpleado, periodo, codigoTransferencia, bruto, descuentos, fechaAlta, id);
 
-                MessageBox.Show("Alta Generada con éxito");
-                limpiarCampos();
+                    MessageBox.Show("Alta Generada con éxito");
+                    limpiarCampos();
+                }
+                else
+                {
+                    MessageBox.Show("Complete todos los campos");
+                }
+                
             }
             catch (Exception ex)
             {
@@ -90,6 +97,20 @@ namespace EstudioContable.interfazForm
             _txtBruto.Text = string.Empty;
             _txtDescuentos.Text = string.Empty;
             _txtFechaAlta.Text = string.Empty;
+        }
+        public bool EsValido()
+        {
+            if (string.IsNullOrEmpty(_txtId.Text) || string.IsNullOrEmpty(_txtIdEmpleado.Text) || string.IsNullOrEmpty(_txtPeriodo.Text)
+                || string.IsNullOrEmpty(_txtCodigoTransferencia.Text) || string.IsNullOrEmpty(_txtBruto.Text)
+                || string.IsNullOrEmpty(_txtDescuentos.Text) || string.IsNullOrEmpty(_txtFechaAlta.Text))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
         }
     }
 }

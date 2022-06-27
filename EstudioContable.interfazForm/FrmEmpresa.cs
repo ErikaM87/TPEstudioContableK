@@ -53,18 +53,25 @@ namespace EstudioContable.interfazForm
         {
             try
             {
-                int id = Convert.ToInt32(_txtId.Text);
-                string razonSocial =_txtRazonSocial.Text;
-                int cuit = Convert.ToInt32(_txtCuit.Text);
-                string domicilio = _txtDomicilio.Text;
-                DateTime fechaAlta = Convert.ToDateTime(_txtFechaAlta.Text) ;
-                int usuario = Convert.ToInt32(_txtUsuario.Text);
-   
+                if (EsValido())
+                {
+                    int id = Convert.ToInt32(_txtId.Text);
+                    string razonSocial = _txtRazonSocial.Text;
+                    int cuit = Convert.ToInt32(_txtCuit.Text);
+                    string domicilio = _txtDomicilio.Text;
+                    DateTime fechaAlta = Convert.ToDateTime(_txtFechaAlta.Text);
+                    int usuario = Convert.ToInt32(_txtUsuario.Text);
 
-                _estudioNegocio.AltaEmpresa(razonSocial, cuit, domicilio, fechaAlta, usuario, id);
 
-                MessageBox.Show("Alta Generada con éxito");
-                limpiarCampos();
+                    _estudioNegocio.AltaEmpresa(razonSocial, cuit, domicilio, fechaAlta, usuario, id);
+
+                    MessageBox.Show("Alta Generada con éxito");
+                    limpiarCampos();
+                }
+                else
+                {
+                    MessageBox.Show("Complete todos los campos");
+                }
             }
             catch (Exception ex)
             {
@@ -92,6 +99,20 @@ namespace EstudioContable.interfazForm
             _txtDomicilio.Text = string.Empty;
             _txtFechaAlta.Text = string.Empty;
             _txtUsuario.Text = string.Empty;
+        }
+        public bool EsValido()
+        {
+            if (string.IsNullOrEmpty(_txtId.Text) || string.IsNullOrEmpty(_txtRazonSocial.Text) || string.IsNullOrEmpty(_txtCuit.Text)
+                || string.IsNullOrEmpty(_txtDomicilio.Text) || string.IsNullOrEmpty(_txtFechaAlta.Text) ||
+                string.IsNullOrEmpty(_txtUsuario.Text))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
         }
 
     }

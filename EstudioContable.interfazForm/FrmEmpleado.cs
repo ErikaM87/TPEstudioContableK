@@ -28,19 +28,26 @@ namespace EstudioContable.interfazForm
         {
             try
             {
-                int id = Convert.ToInt32(_txtId.Text);
-                int idCategoria = Convert.ToInt32(_txtIdCategoria.Text);
-                int idEmpresa = Convert.ToInt32(_txtIdEmpresa.Text);
-                string nombre = _txtNombre.Text;
-                string apellido = _txtApellido.Text;
-                int cuil = Convert.ToInt32(_txtCuil.Text);
-                DateTime fechaNacimiento = Convert.ToDateTime(_txtFechaNacimiento.Text);
-                DateTime fechaAlta = Convert.ToDateTime(_txtFechaAlta.Text);
+                if (EsValido())
+                {
+                    int id = Convert.ToInt32(_txtId.Text);
+                    int idCategoria = Convert.ToInt32(_txtIdCategoria.Text);
+                    int idEmpresa = Convert.ToInt32(_txtIdEmpresa.Text);
+                    string nombre = _txtNombre.Text;
+                    string apellido = _txtApellido.Text;
+                    int cuil = Convert.ToInt32(_txtCuil.Text);
+                    DateTime fechaNacimiento = Convert.ToDateTime(_txtFechaNacimiento.Text);
+                    DateTime fechaAlta = Convert.ToDateTime(_txtFechaAlta.Text);
 
-                _estudioNegocio.AltaEmpleado(id, idCategoria, idEmpresa, nombre, apellido, cuil, fechaNacimiento, fechaAlta,true);
+                    _estudioNegocio.AltaEmpleado(id, idCategoria, idEmpresa, nombre, apellido, cuil, fechaNacimiento, fechaAlta, true);
 
-                MessageBox.Show("Alta Generada con éxito");
-                limpiarCampos();
+                    MessageBox.Show("Alta Generada con éxito");
+                    limpiarCampos();
+                }
+                else
+                {
+                    MessageBox.Show("Complete todos los campos");
+                }
             }
             catch (Exception ex)
             {
@@ -95,6 +102,21 @@ namespace EstudioContable.interfazForm
             _txtApellido.Text = string.Empty;
             _txtFechaNacimiento.Text = string.Empty;
             _txtFechaAlta.Text = string.Empty;
+        }
+
+        public bool EsValido()
+        {
+            if (string.IsNullOrEmpty(_txtApellido.Text) || string.IsNullOrEmpty(_txtNombre.Text) || string.IsNullOrEmpty(_txtIdCategoria.Text)
+                || string.IsNullOrEmpty(_txtIdEmpresa.Text) || string.IsNullOrEmpty(_txtCuil.Text) ||
+                string.IsNullOrEmpty(_txtFechaNacimiento.Text) || string.IsNullOrEmpty(_txtFechaAlta.Text))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
         }
 
 
