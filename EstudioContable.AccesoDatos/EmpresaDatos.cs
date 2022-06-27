@@ -76,7 +76,7 @@ namespace EstudioContable.AccesoDatos
             n.Add("_domicilio", empresa.Domicilio);
             n.Add("_fechaAlta", empresa.FechaAlta.ToString());
             n.Add("_id", empresa.Id.ToString());
-            n.Add("Usuario", "892310");
+            n.Add("Usuario", "853779");
 
             return n;
         }

@@ -23,13 +23,11 @@ namespace EstudioContable.Entidades
           
         }
 
-
-
-        public int Id { get => _id; set => _id = value; }
-        public string Nombre { get => _nombre; set => _nombre = value; }
-        public string Apellido { get => _apellido; set => _apellido = value; }
-        public string Direccion { get => _direccion; set => _direccion = value; }
-        public long Telefono { get => _telefono; set => _telefono = value; }
-        public string Mail { get => _mail; set => _mail = value; }
+        public int Id { get { return _id; } set { _id = value; } }
+        public string Nombre { get { return _nombre; } set { _nombre = value; } }
+        public string Apellido { get { return _apellido; } set { _apellido = value; } }
+        public string Direccion { get { return _direccion; } set { _direccion = value; } }
+        public long Telefono { get { return _telefono; } set { _telefono = value; } }
+        public string Mail { get { return _mail; } set { _mail = value; } }
     }
 }

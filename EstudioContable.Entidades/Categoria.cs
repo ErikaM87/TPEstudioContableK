@@ -24,15 +24,15 @@ namespace EstudioContable.Entidades
             _id = id;
         }
 
+        public int Id { get { return _id; } set { _id = value; } }
+        public string Nombre { get { return _nombre; } set { _nombre = value; } }
+        public string Convenio { get { return _convenio; } set { _convenio = value; } }
+        public double SueldoBasico { get { return _sueldoBasico; } set { _sueldoBasico = value; } }
+
         public override string ToString()
         {
-            return _id.ToString()  + " " + _nombre;
+            return "ID: " + Id.ToString() + "  " +
+                "NOMBRE: " + Nombre;
         }
-
-        public int Id { get => _id; set => _id = value; }
-        public string Nombre { get => _nombre; set => _nombre = value; }
-        public string Convenio { get => _convenio; set => _convenio = value; }
-        public double SueldoBasico { get => _sueldoBasico; set => _sueldoBasico = value; }
-
     }
 }

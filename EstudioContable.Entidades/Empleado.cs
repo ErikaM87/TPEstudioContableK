@@ -26,23 +26,20 @@ namespace EstudioContable.Entidades
             _activo = activo;
         }
 
+        public int IdEmpresa { get { return _idEmpresa; } set { _idEmpresa = value; } }
+        public int IdCategoria { get { return _idCategoria; } set { _idCategoria = value; } }
+        public long Cuil { get { return _cuil; } set { _cuil = value; } }
+        public DateTime FechaNacimiento { get { return _fechaNacimiento; } set { _fechaNacimiento = value; } }
+        public DateTime FechaAlta { get { return _fechaAlta; } set { _fechaAlta = value; } }
+        public bool Activo { get { return _activo; } set { _activo = value; } }
+
         public override string ToString()
         {
-            return "ID: " +Id.ToString()+ "  " +
-                "NOMBRE: " + Nombre + "  "  + 
-                "APELLIDO " + Apellido + "  "  +
+            return "ID: " + Id.ToString() + "  " +
+                "NOMBRE: " + Nombre + "  " +
+                "APELLIDO " + Apellido + "  " +
                 "FECHA DE ALTA:  " + FechaAlta.ToString("dd - MM - yyyy");
-            
-               
         }
-
-        public int Id { get => Id; set => Id = value; }
-        public int IdEmpresa { get => _idEmpresa; set => _idEmpresa = value; }
-        public int IdCategoria { get => _idCategoria; set => _idCategoria = value; }
-        public long Cuil { get => _cuil; set => _cuil = value; }
-        public DateTime FechaNacimiento { get => _fechaNacimiento; set => _fechaNacimiento = value; }
-        public DateTime FechaAlta { get => _fechaNacimiento; set => _fechaNacimiento = value; }
-        public bool Activo { get => _activo; set => _activo = value; }
 
 
     }

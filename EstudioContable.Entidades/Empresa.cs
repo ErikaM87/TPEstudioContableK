@@ -16,15 +16,6 @@ namespace EstudioContable.Entidades
         private int _id;
 
 
-
-        public override string ToString()
-        {
-            return  _id + " "  +_razonSocial ;
-                
-        }
-
-        
-
         public Empresa(string razonSocial, long cuit, string domicilio, DateTime fechaAlta, int usuario, int id)
         {
             _razonSocial = razonSocial;
@@ -34,15 +25,16 @@ namespace EstudioContable.Entidades
             _usuario = usuario;
             _id = id;
         }
+        public int Id { get { return _id; } set { _id = value; } }
+        public string RazonSocial { get { return _razonSocial; } set { _razonSocial = value; } }
+        public long Cuit { get { return _cuit; } set { _cuit = value; } }
+        public string Domicilio { get { return _domicilio; } set { _domicilio = value; } }
+        public DateTime FechaAlta { get { return _fechaAlta; } set { _fechaAlta = value; } }
 
-
-
-
-
-        public int Id { get => _id; set => _id = value; }
-        public string RazonSocial { get => _razonSocial; set => _razonSocial = value; }
-        public long Cuit { get => _cuit; set => _cuit = value; }
-        public string Domicilio { get => _domicilio; set => _domicilio = value; }
-        public DateTime FechaAlta { get => _fechaAlta; set => _fechaAlta = value; }
+        public override string ToString()
+        {
+            return "ID EMPRESA: " + Id.ToString() + "  " +
+            "RAZÓN SOCIAL:" + RazonSocial.ToString();
+        }
     }
 }
