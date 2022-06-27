@@ -47,6 +47,7 @@
             this.lblFechaAlta = new System.Windows.Forms.Label();
             this.lblVolver = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this._lblFormato = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,6 +81,7 @@
             this._txtId.Name = "_txtId";
             this._txtId.Size = new System.Drawing.Size(72, 22);
             this._txtId.TabIndex = 2;
+            this._txtId.TextChanged += new System.EventHandler(this._txtId_TextChanged);
             // 
             // lblId
             // 
@@ -97,6 +99,7 @@
             this._txtIdEmpleado.Name = "_txtIdEmpleado";
             this._txtIdEmpleado.Size = new System.Drawing.Size(116, 22);
             this._txtIdEmpleado.TabIndex = 4;
+            this._txtIdEmpleado.TextChanged += new System.EventHandler(this._txtId_TextChanged);
             // 
             // _txtPeriodo
             // 
@@ -213,12 +216,23 @@
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
+            // _lblFormato
+            // 
+            this._lblFormato.AutoSize = true;
+            this._lblFormato.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblFormato.Location = new System.Drawing.Point(306, 320);
+            this._lblFormato.Name = "_lblFormato";
+            this._lblFormato.Size = new System.Drawing.Size(132, 14);
+            this._lblFormato.TabIndex = 18;
+            this._lblFormato.Text = "Formato: \"dd-mm-yyyy\"";
+            // 
             // FrmLiquidacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(723, 348);
+            this.Controls.Add(this._lblFormato);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblVolver);
             this.Controls.Add(this.lblFechaAlta);
@@ -267,5 +281,6 @@
         private System.Windows.Forms.Label lblFechaAlta;
         private System.Windows.Forms.LinkLabel lblVolver;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label _lblFormato;
     }
 }

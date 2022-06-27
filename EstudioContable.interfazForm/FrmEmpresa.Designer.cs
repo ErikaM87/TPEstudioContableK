@@ -45,6 +45,7 @@
             this._btnAltaEmpresa = new System.Windows.Forms.Button();
             this._btnVolver = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this._lblFormato = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +67,7 @@
             this._txtRazonSocial.Name = "_txtRazonSocial";
             this._txtRazonSocial.Size = new System.Drawing.Size(139, 20);
             this._txtRazonSocial.TabIndex = 1;
+            this._txtRazonSocial.TextChanged += new System.EventHandler(this._txtRazonSocial_TextChanged);
             // 
             // _txtCuit
             // 
@@ -73,6 +75,7 @@
             this._txtCuit.Name = "_txtCuit";
             this._txtCuit.Size = new System.Drawing.Size(139, 20);
             this._txtCuit.TabIndex = 2;
+            this._txtCuit.TextChanged += new System.EventHandler(this._txtCuit_TextChanged);
             // 
             // _txtDomicilio
             // 
@@ -94,6 +97,7 @@
             this._txtId.Name = "_txtId";
             this._txtId.Size = new System.Drawing.Size(73, 20);
             this._txtId.TabIndex = 5;
+            this._txtId.TextChanged += new System.EventHandler(this._txtId_TextChanged);
             // 
             // _txtUsuario
             // 
@@ -194,12 +198,23 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
+            // _lblFormato
+            // 
+            this._lblFormato.AutoSize = true;
+            this._lblFormato.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblFormato.Location = new System.Drawing.Point(268, 234);
+            this._lblFormato.Name = "_lblFormato";
+            this._lblFormato.Size = new System.Drawing.Size(132, 14);
+            this._lblFormato.TabIndex = 16;
+            this._lblFormato.Text = "Formato: \"dd-mm-yyyy\"";
+            // 
             // FrmEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(624, 342);
+            this.Controls.Add(this._lblFormato);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this._btnVolver);
             this.Controls.Add(this._btnAltaEmpresa);
@@ -243,5 +258,6 @@
         private System.Windows.Forms.Button _btnAltaEmpresa;
         private System.Windows.Forms.LinkLabel _btnVolver;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label _lblFormato;
     }
 }

@@ -49,6 +49,8 @@
             this._btnConsultaEmpleado = new System.Windows.Forms.Button();
             this.lblVolver = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this._lblFormato = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +72,7 @@
             this._txtIdCategoria.Name = "_txtIdCategoria";
             this._txtIdCategoria.Size = new System.Drawing.Size(116, 22);
             this._txtIdCategoria.TabIndex = 1;
+            this._txtIdCategoria.TextChanged += new System.EventHandler(this._txtId_TextChanged);
             // 
             // _txtIdEmpresa
             // 
@@ -77,6 +80,7 @@
             this._txtIdEmpresa.Name = "_txtIdEmpresa";
             this._txtIdEmpresa.Size = new System.Drawing.Size(116, 22);
             this._txtIdEmpresa.TabIndex = 2;
+            this._txtIdEmpresa.TextChanged += new System.EventHandler(this._txtId_TextChanged);
             // 
             // _txtCuil
             // 
@@ -84,6 +88,7 @@
             this._txtCuil.Name = "_txtCuil";
             this._txtCuil.Size = new System.Drawing.Size(116, 22);
             this._txtCuil.TabIndex = 3;
+            this._txtCuil.TextChanged += new System.EventHandler(this._txtCuil_TextChanged);
             // 
             // lblIdEmpresa
             // 
@@ -121,6 +126,7 @@
             this._txtNombre.Name = "_txtNombre";
             this._txtNombre.Size = new System.Drawing.Size(116, 22);
             this._txtNombre.TabIndex = 7;
+            this._txtNombre.TextChanged += new System.EventHandler(this._txtNombre_TextChanged);
             // 
             // _txtId
             // 
@@ -128,6 +134,7 @@
             this._txtId.Name = "_txtId";
             this._txtId.Size = new System.Drawing.Size(116, 22);
             this._txtId.TabIndex = 8;
+            this._txtId.TextChanged += new System.EventHandler(this._txtId_TextChanged);
             // 
             // _txtFechaAlta
             // 
@@ -149,6 +156,7 @@
             this._txtApellido.Name = "_txtApellido";
             this._txtApellido.Size = new System.Drawing.Size(116, 22);
             this._txtApellido.TabIndex = 11;
+            this._txtApellido.TextChanged += new System.EventHandler(this._txtApellido_TextChanged);
             // 
             // lblNombre
             // 
@@ -232,12 +240,34 @@
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
+            // _lblFormato
+            // 
+            this._lblFormato.AutoSize = true;
+            this._lblFormato.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblFormato.Location = new System.Drawing.Point(279, 306);
+            this._lblFormato.Name = "_lblFormato";
+            this._lblFormato.Size = new System.Drawing.Size(132, 14);
+            this._lblFormato.TabIndex = 20;
+            this._lblFormato.Text = "Formato: \"dd-mm-yyyy\"";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(279, 352);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 14);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Formato: \"dd-mm-yyyy\"";
+            // 
             // FrmEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(703, 392);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this._lblFormato);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblVolver);
             this.Controls.Add(this._btnConsultaEmpleado);
@@ -290,5 +320,7 @@
         private System.Windows.Forms.Button _btnConsultaEmpleado;
         private System.Windows.Forms.LinkLabel lblVolver;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label _lblFormato;
+        private System.Windows.Forms.Label label1;
     }
 }

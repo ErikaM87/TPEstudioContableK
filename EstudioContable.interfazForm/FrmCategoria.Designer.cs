@@ -50,6 +50,7 @@
             this._txtId.Name = "_txtId";
             this._txtId.Size = new System.Drawing.Size(85, 22);
             this._txtId.TabIndex = 0;
+            this._txtId.TextChanged += new System.EventHandler(this._txtId_TextChanged);
             // 
             // _txtSueldoBasico
             // 
@@ -57,6 +58,7 @@
             this._txtSueldoBasico.Name = "_txtSueldoBasico";
             this._txtSueldoBasico.Size = new System.Drawing.Size(144, 22);
             this._txtSueldoBasico.TabIndex = 1;
+            this._txtSueldoBasico.TextChanged += new System.EventHandler(this._txtSueldoBasico_TextChanged);
             // 
             // _txtConvenio
             // 

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EstudioContable.Negocio;
 using EstudioContable.Entidades;
+using System.Text.RegularExpressions;
 
 namespace EstudioContable.interfazForm
 {
@@ -104,6 +105,33 @@ namespace EstudioContable.interfazForm
             else
             {
                 return true;
+            }
+
+        }
+        private void _txtId_TextChanged(object sender, EventArgs e)
+        {
+            if (!Regex.IsMatch(_txtId.Text, @"^[0-9]+$"))
+            {
+                MessageBox.Show("Debe ingresar un número de Id.");
+                _txtId.Text = string.Empty;
+            }
+
+        }
+        private void _txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(_txtNombre.Text, @"^[0-9]+$"))
+            {
+                MessageBox.Show("Debe ingresar letras en este campo.");
+                _txtNombre.Text = string.Empty;
+            }
+        }
+
+        private void _txtSueldoBasico_TextChanged(object sender, EventArgs e)
+        {
+            if (!Regex.IsMatch(_txtSueldoBasico.Text, @"^[0-9]+$"))
+            {
+                MessageBox.Show("Debe ingresar números en este campo.");
+                _txtSueldoBasico.Text = string.Empty;
             }
 
         }
