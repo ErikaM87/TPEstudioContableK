@@ -37,6 +37,7 @@ namespace EstudioContable.interfazForm
                 else
                 {
                     MessageBox.Show("Liquidación inexistente");
+                    limpiarCampos();
                 }
             }
             else
@@ -60,10 +61,12 @@ namespace EstudioContable.interfazForm
                 _estudioNegocio.AltaLiquidacion( idEmpleado, periodo, codigoTransferencia, bruto, descuentos, fechaAlta,id);
 
                 MessageBox.Show("Alta Generada con éxito");
+                limpiarCampos();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
+                limpiarCampos();
             }
         }
         
@@ -77,6 +80,16 @@ namespace EstudioContable.interfazForm
         private void FrmLiquidacion_Load(object sender, EventArgs e)
         {
 
+        }
+        public void limpiarCampos()
+        {
+            _txtId.Text = string.Empty;
+            _txtIdEmpleado.Text = string.Empty;
+            _txtPeriodo.Text = string.Empty;
+            _txtCodigoTransferencia.Text = string.Empty;
+            _txtBruto.Text = string.Empty;
+            _txtDescuentos.Text = string.Empty;
+            _txtFechaAlta.Text = string.Empty;
         }
     }
 }

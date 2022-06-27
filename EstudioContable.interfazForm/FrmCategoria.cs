@@ -37,6 +37,7 @@ namespace EstudioContable.interfazForm
                 else
                 {
                     MessageBox.Show("Categoría inexistente");
+                    limpiarCampos();
                 }
             }
             else
@@ -58,10 +59,12 @@ namespace EstudioContable.interfazForm
                 _estudioNegocio.AltaCategoria(nombre, convenio, sueldoBasico, id);
 
                 MessageBox.Show("Alta Generada con éxito");
+                limpiarCampos();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
+                limpiarCampos();
             }
         }
 
@@ -74,6 +77,14 @@ namespace EstudioContable.interfazForm
         private void FrmCategoria_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public void limpiarCampos()
+        {
+            _txtId.Text = string.Empty;
+            _txtNombre.Text = string.Empty;
+            _txtConvenio.Text = string.Empty;
+            _txtSueldoBasico.Text = string.Empty;
         }
     }
 }

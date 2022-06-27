@@ -39,6 +39,7 @@ namespace EstudioContable.interfazForm
                 else
                 {
                     MessageBox.Show("Empresa inexistente");
+                    limpiarCampos();
                 }
             }
             else
@@ -63,10 +64,12 @@ namespace EstudioContable.interfazForm
                 _estudioNegocio.AltaEmpresa(razonSocial, cuit, domicilio, fechaAlta, usuario, id);
 
                 MessageBox.Show("Alta Generada con éxito");
+                limpiarCampos();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
+                limpiarCampos();
             }
         }
 
@@ -81,6 +84,15 @@ namespace EstudioContable.interfazForm
             this.Close();
         }
 
-        
+        public void limpiarCampos()
+        {
+            _txtId.Text = string.Empty;
+            _txtRazonSocial.Text = string.Empty;
+            _txtCuit.Text = string.Empty;
+            _txtDomicilio.Text = string.Empty;
+            _txtFechaAlta.Text = string.Empty;
+            _txtUsuario.Text = string.Empty;
+        }
+
     }
 }

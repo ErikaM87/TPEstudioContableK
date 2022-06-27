@@ -40,10 +40,12 @@ namespace EstudioContable.interfazForm
                 _estudioNegocio.AltaEmpleado(id, idCategoria, idEmpresa, nombre, apellido, cuil, fechaNacimiento, fechaAlta,true);
 
                 MessageBox.Show("Alta Generada con éxito");
+                limpiarCampos();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
+                limpiarCampos();
             }
         }
 
@@ -69,6 +71,7 @@ namespace EstudioContable.interfazForm
                 else
                 {
                     MessageBox.Show("Empleado inexistente");
+                    limpiarCampos();
                 }
             }
             else
@@ -82,7 +85,19 @@ namespace EstudioContable.interfazForm
         {
 
         }
+        public void limpiarCampos()
+        {
+            _txtId.Text = string.Empty;
+            _txtIdCategoria.Text = string.Empty;
+            _txtIdEmpresa.Text = string.Empty;
+            _txtCuil.Text = string.Empty;
+            _txtNombre.Text = string.Empty;
+            _txtApellido.Text = string.Empty;
+            _txtFechaNacimiento.Text = string.Empty;
+            _txtFechaAlta.Text = string.Empty;
+        }
 
-       
+
+
     }
 }
