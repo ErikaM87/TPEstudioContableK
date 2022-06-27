@@ -23,7 +23,7 @@ namespace EstudioContable.interfazForm
         {
             _categoria = categoria;
             _estudioNegocio = new EstudioNegocio();
-            _empleados = _estudioNegocio.GetEmpleadoByIdCategoria(categoria._id);
+            _empleados = _estudioNegocio.GetEmpleadoByIdCategoria(categoria.Id);
             _liquidaciones = _estudioNegocio.ReporteGetByIdCategoria(_empleados);
             InitializeComponent();
         }

@@ -72,14 +72,14 @@ namespace EstudioContable.AccesoDatos
         {
             NameValueCollection n = new NameValueCollection();
 
-            n.Add("idCategoria", empleado._idCategoria.ToString());
-            n.Add("idEmpresa", empleado._idEmpresa.ToString());
-            n.Add("cuil", empleado._cuil.ToString());
-            n.Add("nombre", empleado._nombre);
-            n.Add("apellido", empleado._apellido);
-            n.Add("fechaNacimiento", empleado._fechaNacimiento.ToString());
-            n.Add("fechaAlta", empleado._fechaAlta.ToString());
-            n.Add("id", empleado._id.ToString());
+            n.Add("idCategoria", empleado.IdCategoria.ToString());
+            n.Add("idEmpresa", empleado.IdEmpresa.ToString());
+            n.Add("cuil", empleado.Cuil.ToString());
+            n.Add("nombre", empleado.Nombre);
+            n.Add("apellido", empleado.Apellido);
+            n.Add("fechaNacimiento", empleado.FechaNacimiento.ToString());
+            n.Add("fechaAlta", empleado.FechaAlta.ToString());
+            n.Add("id", empleado.Id.ToString());
             
             Console.WriteLine(n);
             return n;

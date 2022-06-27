@@ -57,13 +57,13 @@ namespace EstudioContable.Negocio
         {
             // validar cliente no nulo
 
-            return _categoriaDatos.TraerPorIdCategoria(categoria._id);
+            return _categoriaDatos.TraerPorIdCategoria(categoria.Id);
         }
         public Liquidacion TraerLiquidacion(Liquidacion liquidacion)
         {
             // validar cliente no nulo
 
-            return _liquidacionDatos.TraerPorIdLiquidacion(liquidacion._id);
+            return _liquidacionDatos.TraerPorIdLiquidacion(liquidacion.Id);
         }
         #endregion
 
@@ -75,7 +75,7 @@ namespace EstudioContable.Negocio
 
             foreach (var item in GetListaEmpleados())
             {
-                if (idEmpleado == item._id)
+                if (idEmpleado == item.Id)
                     return item;
 
             }
@@ -87,7 +87,7 @@ namespace EstudioContable.Negocio
            
             foreach (var item in GetListaEmpleados())
             {
-                if (idEmpresa == item._id)
+                if (idEmpresa == item.Id)
                     return item;
             }
 
@@ -98,7 +98,7 @@ namespace EstudioContable.Negocio
             
             foreach (var item in GetListaEmpresa())
             {
-                if (idEmpresa == item._id)
+                if (idEmpresa == item.Id)
                     return item;
             
             }
@@ -110,7 +110,7 @@ namespace EstudioContable.Negocio
            
             foreach (var item in GetListaCategoria())
             {
-                if (idCategoria == item._id)
+                if (idCategoria == item.Id)
                     return item;
                 
             }
@@ -123,7 +123,7 @@ namespace EstudioContable.Negocio
            
             foreach (var item in GetListaLiquidacion())
             {
-                if (idLiquidacion == item._id)
+                if (idLiquidacion == item.Id)
                     return item;
                 
             }
@@ -195,7 +195,7 @@ namespace EstudioContable.Negocio
             List<Empleado> _empleados = GetListaEmpleados();
             foreach(Empleado e in _empleados)
             {
-                if(idEmpresa == e._idEmpresa)
+                if(idEmpresa == e.IdEmpresa)
                 {
                     empleados.Add(e);
                     
@@ -222,7 +222,7 @@ namespace EstudioContable.Negocio
             List<Empleado> _empleados = GetListaEmpleados();
             foreach (Empleado e in _empleados)
             {
-                if (idCategoria == e._idCategoria)
+                if (idCategoria == e.IdCategoria)
                 {
                     empleados.Add(e);
 
@@ -250,7 +250,7 @@ namespace EstudioContable.Negocio
 
                     foreach (Liquidacion l in _liquidaciones)
                     {
-                        if (e._id == l._idEmpleado)
+                        if (e.Id == l.IdEmpleado)
                         {
                             liquidaciones.Add(l);
 
@@ -280,7 +280,7 @@ namespace EstudioContable.Negocio
 
             foreach (Empleado emp in listadoEmpleados)
             {
-                if (emp._id == id)
+                if (emp.Id == id)
                 {
                     resultado = true;
                     break;
@@ -299,7 +299,7 @@ namespace EstudioContable.Negocio
 
             foreach (Empresa emp in listadoEmpresas)
             {
-                if (emp._id == id)
+                if (emp.Id == id)
                 {
                     resultado = true;
                     break;
@@ -318,7 +318,7 @@ namespace EstudioContable.Negocio
 
             foreach (Categoria categoria in listadoCategorias)
             {
-                if (categoria._id == id)
+                if (categoria.Id == id)
                 {
                     resultado = true;
                     break;
@@ -337,7 +337,7 @@ namespace EstudioContable.Negocio
 
             foreach (Liquidacion liquidacion in listadoLiquidaciones)
             {
-                if (liquidacion._id == id)
+                if (liquidacion.Id == id)
                 {
                     resultado = true;
                     break;

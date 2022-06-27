@@ -8,12 +8,12 @@ namespace EstudioContable.Entidades
 {
     public class Empresa
     {
-        public string _razonSocial;
-        public long _cuit;
-        public string _domicilio;
-        public DateTime _fechaAlta;
-        public int _usuario;
-        public int _id;
+        private string _razonSocial;
+        private long _cuit;
+        private string _domicilio;
+        private DateTime _fechaAlta;
+        private int _usuario;
+        private int _id;
 
 
 
@@ -39,10 +39,10 @@ namespace EstudioContable.Entidades
 
 
 
-        //public int Id { get => _id; set => _id = value; }
-        //public string RazonSocial { get => _razonSocial; set => _razonSocial = value; }
-        //public long Cuit { get => _cuit; set => _cuit = value; }
-        //public string Domicilio { get => _domicilio; set => _domicilio = value; }
-        //public DateTime FechaAlta { get => _fechaAlta; set => _fechaAlta = value; }
+        public int Id { get => _id; set => _id = value; }
+        public string RazonSocial { get => _razonSocial; set => _razonSocial = value; }
+        public long Cuit { get => _cuit; set => _cuit = value; }
+        public string Domicilio { get => _domicilio; set => _domicilio = value; }
+        public DateTime FechaAlta { get => _fechaAlta; set => _fechaAlta = value; }
     }
 }

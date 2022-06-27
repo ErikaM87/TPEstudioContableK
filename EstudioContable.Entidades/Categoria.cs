@@ -8,10 +8,10 @@ namespace EstudioContable.Entidades
 {
     public class Categoria
     {
-        public int _id;
-        public string _nombre;
-        public string _convenio;
-        public double _sueldoBasico;
+        private int _id;
+        private string _nombre;
+        private string _convenio;
+        private double _sueldoBasico;
 
      
 
@@ -29,10 +29,10 @@ namespace EstudioContable.Entidades
             return _id.ToString()  + " " + _nombre;
         }
 
-        //public int id { get => _id; set => _id = value }
-        //public string Nombre { get => _nombre; set => _nombre = value; }
-        //public string Convenio { get => _convenio; set => _convenio = value; }
-        //public double SueldoBasico { get => _sueldoBasico; set => _sueldoBasico = value; }
+        public int Id { get => _id; set => _id = value; }
+        public string Nombre { get => _nombre; set => _nombre = value; }
+        public string Convenio { get => _convenio; set => _convenio = value; }
+        public double SueldoBasico { get => _sueldoBasico; set => _sueldoBasico = value; }
 
     }
 }

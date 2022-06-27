@@ -9,12 +9,12 @@ namespace EstudioContable.Entidades
     public class Empleado : Persona
     {
    
-        public int _idEmpresa;
-        public int _idCategoria;
-        public long _cuil;
-        public DateTime _fechaNacimiento;
-        public DateTime _fechaAlta;
-        public bool _activo;
+        private int _idEmpresa;
+        private int _idCategoria;
+        private long _cuil;
+        private DateTime _fechaNacimiento;
+        private DateTime _fechaAlta;
+        private bool _activo;
 
         public Empleado(int id, int idEmpresa,string nombre,string apellido, int idCategoria, long cuil, DateTime fechaNacimiento, DateTime fechaAlta, bool activo) :  base (id,  nombre,  apellido )
         {
@@ -28,21 +28,21 @@ namespace EstudioContable.Entidades
 
         public override string ToString()
         {
-            return "ID: " +_id.ToString()+ "  " +
-                "NOMBRE: " + _nombre + "  "  + 
-                "APELLIDO " + _apellido + "  "  +
-                "FECHA DE ALTA:  " + _fechaAlta.ToString("dd - MM - yyyy");
+            return "ID: " +Id.ToString()+ "  " +
+                "NOMBRE: " + Nombre + "  "  + 
+                "APELLIDO " + Apellido + "  "  +
+                "FECHA DE ALTA:  " + FechaAlta.ToString("dd - MM - yyyy");
             
                
         }
 
-        //public int id { get => _id; set => _id = value; }
-        //public int idEmpresa { get => _idEmpresa; set => _idEmpresa = value; }
-        //public int idCategoria { get => _idCategoria; set => _idCategoria = value; }
-        //public long cuit { get => _cuit; set => _cuit = value; }
-        //public DateTime fechaNacimiento { get => _fechaNacimiento; set => _fechaNacimiento = value; }
-        //public DateTime fechaAlta { get => _fechaNacimiento; set => _fechaNacimiento = value; }
-        //public bool activo { get => _activo; set => _activo = value; }
+        public int Id { get => Id; set => Id = value; }
+        public int IdEmpresa { get => _idEmpresa; set => _idEmpresa = value; }
+        public int IdCategoria { get => _idCategoria; set => _idCategoria = value; }
+        public long Cuil { get => _cuil; set => _cuil = value; }
+        public DateTime FechaNacimiento { get => _fechaNacimiento; set => _fechaNacimiento = value; }
+        public DateTime FechaAlta { get => _fechaNacimiento; set => _fechaNacimiento = value; }
+        public bool Activo { get => _activo; set => _activo = value; }
 
 
     }

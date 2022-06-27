@@ -67,13 +67,13 @@ namespace EstudioContable.AccesoDatos
         {
             NameValueCollection n = new NameValueCollection();
 
-            n.Add("idEmpleado", liquidacion._idEmpleado.ToString());
-            n.Add("periodo", liquidacion._periodo.ToString());
-            n.Add("codigoTransferencia", liquidacion._codigoTransferencia.ToString());
-            n.Add("bruto", liquidacion._bruto.ToString());
-            n.Add("descuentos", liquidacion._descuentos.ToString());
-            n.Add("fechaAlta", liquidacion._fechaAlta.ToString());
-            n.Add("id", liquidacion._id.ToString());
+            n.Add("idEmpleado", liquidacion.IdEmpleado.ToString());
+            n.Add("periodo", liquidacion.Periodo.ToString());
+            n.Add("codigoTransferencia", liquidacion.CodigoTransferencia.ToString());
+            n.Add("bruto", liquidacion.Bruto.ToString());
+            n.Add("descuentos", liquidacion.Descuentos.ToString());
+            n.Add("fechaAlta", liquidacion.FechaAlta.ToString());
+            n.Add("id", liquidacion.Id.ToString());
 
             return n;
         }
