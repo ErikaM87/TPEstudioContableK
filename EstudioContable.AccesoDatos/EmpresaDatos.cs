@@ -71,12 +71,12 @@ namespace EstudioContable.AccesoDatos
         {
             NameValueCollection n = new NameValueCollection();
 
-            n.Add("_razonSocial", empresa.RazonSocial);
-            n.Add("_cuit", empresa.Cuit.ToString());
-            n.Add("_domicilio", empresa.Domicilio);
-            n.Add("_fechaAlta", empresa.FechaAlta.ToString());
-            n.Add("_id", empresa.Id.ToString());
-            n.Add("Usuario", "853779");
+            n.Add("RazonSocial", empresa.RazonSocial);
+            n.Add("Cuit", empresa.Cuit.ToString());
+            n.Add("Domicilio", empresa.Domicilio);
+            n.Add("FechaAlta", empresa.FechaAlta.ToString());
+            n.Add("Id", empresa.Id.ToString());
+            n.Add("Usuario", empresa.Usuario.ToString());
 
             return n;
         }

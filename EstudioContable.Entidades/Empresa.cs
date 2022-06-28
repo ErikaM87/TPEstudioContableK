@@ -29,13 +29,15 @@ namespace EstudioContable.Entidades
         public string RazonSocial { get { return _razonSocial; } set { _razonSocial = value; } }
         public long Cuit { get { return _cuit; } set { _cuit = value; } }
         public string Domicilio { get { return _domicilio; } set { _domicilio = value; } }
+
+        public int Usuario{ get { return _usuario; } set { _usuario = value; } }
         public DateTime FechaAlta { get { return _fechaAlta; } set { _fechaAlta = value; } }
 
         public override string ToString()
         {
             if (RazonSocial != "" && RazonSocial != null)
             {
-                return "ID EMPRESA: " + Id.ToString() + "  " +
+                return "ID: " + Id.ToString() + "  " +
                 "RAZÓN SOCIAL: " + RazonSocial.ToString();
             }
             else
