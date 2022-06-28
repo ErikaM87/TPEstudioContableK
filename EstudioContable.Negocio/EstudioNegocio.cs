@@ -135,7 +135,7 @@ namespace EstudioContable.Negocio
         #endregion
 
         #region Métodos de Altas
-        public void AltaEmpleado(int id, int idCategoria, int idEmpresa, string nombre, string apellido, int cuil, DateTime fnac, DateTime fechaAlta, bool activo)
+        public void AltaEmpleado(int id, int idCategoria, int idEmpresa, string nombre, string apellido, long cuil, DateTime fnac, DateTime fechaAlta, bool activo)
         {
             Empleado empleado = new Empleado(id,idEmpresa,nombre,apellido, idCategoria, cuil,fnac,fechaAlta, true);
 
@@ -147,7 +147,7 @@ namespace EstudioContable.Negocio
             if (!transaction.IsOk)
                 throw new Exception(transaction.Error);
         }
-        public void AltaEmpresa(string razonSocial, int cuit, string domicilio, DateTime fechaAlta, int usuario, int id)
+        public void AltaEmpresa(string razonSocial, long cuit, string domicilio, DateTime fechaAlta, int usuario, int id)
         {
             Empresa empresa = new Empresa(razonSocial,cuit,domicilio,fechaAlta,usuario,id);
 

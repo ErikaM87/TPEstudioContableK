@@ -44,7 +44,7 @@ namespace EstudioContable.interfazForm
                                 int idEmpresa = Convert.ToInt32(_txtIdEmpresa.Text);
                                 string nombre = _txtNombre.Text;
                                 string apellido = _txtApellido.Text;
-                                int cuil = Convert.ToInt32(_txtCuil.Text);
+                                long cuil = long.Parse(_txtCuil.Text);
                                 DateTime fechaNacimiento = Convert.ToDateTime(_txtFechaNacimiento.Text);
                                 DateTime fechaAlta = Convert.ToDateTime(_txtFechaAlta.Text);
 

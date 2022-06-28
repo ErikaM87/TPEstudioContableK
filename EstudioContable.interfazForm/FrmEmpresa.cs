@@ -61,7 +61,7 @@ namespace EstudioContable.interfazForm
                     {
                         int id = Convert.ToInt32(_txtId.Text);
                         string razonSocial = _txtRazonSocial.Text;
-                        int cuit = Convert.ToInt32(_txtCuit.Text);
+                        long cuit = long.Parse(_txtCuit.Text);
                         string domicilio = _txtDomicilio.Text;
                         DateTime fechaAlta = Convert.ToDateTime(_txtFechaAlta.Text);
                         int usuario = Convert.ToInt32(_txtUsuario.Text);
