@@ -33,8 +33,16 @@ namespace EstudioContable.Entidades
 
         public override string ToString()
         {
-            return "ID EMPRESA: " + Id.ToString() + "  " +
-            "RAZÓN SOCIAL:" + RazonSocial.ToString();
+            if (RazonSocial != "" && RazonSocial != null)
+            {
+                return "ID EMPRESA: " + Id.ToString() + "  " +
+                "RAZÓN SOCIAL: " + RazonSocial.ToString();
+            }
+            else
+            {
+                return "ID EMPRESA: " + Id.ToString() + "  ";
+            }
+
         }
     }
 }

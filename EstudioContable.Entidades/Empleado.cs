@@ -38,7 +38,7 @@ namespace EstudioContable.Entidades
             return "ID: " + Id.ToString() + "  " +
                 "NOMBRE: " + Nombre + "  " +
                 "APELLIDO " + Apellido + "  " +
-                "FECHA DE ALTA:  " + FechaAlta.ToString("dd - MM - yyyy");
+                "FECHA DE ALTA: " + FechaAlta.ToString("dd - MM - yyyy");
         }
 
 
