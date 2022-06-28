@@ -203,7 +203,7 @@
             // lblVolver
             // 
             this.lblVolver.AutoSize = true;
-            this.lblVolver.Location = new System.Drawing.Point(531, 265);
+            this.lblVolver.Location = new System.Drawing.Point(584, 315);
             this.lblVolver.Name = "lblVolver";
             this.lblVolver.Size = new System.Drawing.Size(42, 15);
             this.lblVolver.TabIndex = 16;
@@ -214,7 +214,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(650, 273);
+            this.pictureBox1.Location = new System.Drawing.Point(655, 312);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(61, 65);
             this.pictureBox1.TabIndex = 17;
@@ -235,7 +235,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(723, 348);
+            this.ClientSize = new System.Drawing.Size(728, 392);
             this.Controls.Add(this._lblFormato);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblVolver);

@@ -132,7 +132,7 @@
             // 
             this._txtId.Location = new System.Drawing.Point(146, 24);
             this._txtId.Name = "_txtId";
-            this._txtId.Size = new System.Drawing.Size(116, 22);
+            this._txtId.Size = new System.Drawing.Size(85, 22);
             this._txtId.TabIndex = 8;
             this._txtId.TextChanged += new System.EventHandler(this._txtId_TextChanged);
             // 
@@ -225,7 +225,7 @@
             // lblVolver
             // 
             this.lblVolver.AutoSize = true;
-            this.lblVolver.Location = new System.Drawing.Point(493, 309);
+            this.lblVolver.Location = new System.Drawing.Point(596, 321);
             this.lblVolver.Name = "lblVolver";
             this.lblVolver.Size = new System.Drawing.Size(42, 15);
             this.lblVolver.TabIndex = 18;
@@ -236,7 +236,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(640, 325);
+            this.pictureBox1.Location = new System.Drawing.Point(666, 321);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 65);
             this.pictureBox1.TabIndex = 19;
@@ -267,7 +267,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(703, 392);
+            this.ClientSize = new System.Drawing.Size(728, 392);
             this.Controls.Add(this.label1);
             this.Controls.Add(this._lblFormato);
             this.Controls.Add(this.pictureBox1);

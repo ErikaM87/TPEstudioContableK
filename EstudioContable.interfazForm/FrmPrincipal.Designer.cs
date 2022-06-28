@@ -42,9 +42,9 @@
             // 
             this._btnCategorias.BackColor = System.Drawing.SystemColors.Highlight;
             this._btnCategorias.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._btnCategorias.Location = new System.Drawing.Point(38, 122);
+            this._btnCategorias.Location = new System.Drawing.Point(85, 175);
             this._btnCategorias.Name = "_btnCategorias";
-            this._btnCategorias.Size = new System.Drawing.Size(182, 38);
+            this._btnCategorias.Size = new System.Drawing.Size(205, 64);
             this._btnCategorias.TabIndex = 2;
             this._btnCategorias.Text = "CATEGORÍAS";
             this._btnCategorias.UseVisualStyleBackColor = false;
@@ -54,9 +54,9 @@
             // 
             this._btnLiquidaciones.BackColor = System.Drawing.SystemColors.Highlight;
             this._btnLiquidaciones.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._btnLiquidaciones.Location = new System.Drawing.Point(374, 122);
+            this._btnLiquidaciones.Location = new System.Drawing.Point(446, 175);
             this._btnLiquidaciones.Name = "_btnLiquidaciones";
-            this._btnLiquidaciones.Size = new System.Drawing.Size(182, 38);
+            this._btnLiquidaciones.Size = new System.Drawing.Size(205, 64);
             this._btnLiquidaciones.TabIndex = 5;
             this._btnLiquidaciones.Text = "LIQUIDACIONES";
             this._btnLiquidaciones.UseVisualStyleBackColor = false;
@@ -66,9 +66,9 @@
             // 
             this._btnEmpresas.BackColor = System.Drawing.SystemColors.Highlight;
             this._btnEmpresas.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._btnEmpresas.Location = new System.Drawing.Point(374, 41);
+            this._btnEmpresas.Location = new System.Drawing.Point(446, 48);
             this._btnEmpresas.Name = "_btnEmpresas";
-            this._btnEmpresas.Size = new System.Drawing.Size(182, 38);
+            this._btnEmpresas.Size = new System.Drawing.Size(205, 64);
             this._btnEmpresas.TabIndex = 6;
             this._btnEmpresas.Text = "EMPRESAS";
             this._btnEmpresas.UseVisualStyleBackColor = false;
@@ -78,9 +78,9 @@
             // 
             this._btnEmpleados.BackColor = System.Drawing.SystemColors.Highlight;
             this._btnEmpleados.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._btnEmpleados.Location = new System.Drawing.Point(38, 41);
+            this._btnEmpleados.Location = new System.Drawing.Point(85, 48);
             this._btnEmpleados.Name = "_btnEmpleados";
-            this._btnEmpleados.Size = new System.Drawing.Size(182, 38);
+            this._btnEmpleados.Size = new System.Drawing.Size(205, 64);
             this._btnEmpleados.TabIndex = 7;
             this._btnEmpleados.Text = "EMPLEADOS";
             this._btnEmpleados.UseVisualStyleBackColor = false;
@@ -90,9 +90,9 @@
             // 
             this._btnGenerarReportes.BackColor = System.Drawing.SystemColors.Highlight;
             this._btnGenerarReportes.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._btnGenerarReportes.Location = new System.Drawing.Point(169, 206);
+            this._btnGenerarReportes.Location = new System.Drawing.Point(216, 281);
             this._btnGenerarReportes.Name = "_btnGenerarReportes";
-            this._btnGenerarReportes.Size = new System.Drawing.Size(253, 38);
+            this._btnGenerarReportes.Size = new System.Drawing.Size(294, 64);
             this._btnGenerarReportes.TabIndex = 8;
             this._btnGenerarReportes.Text = "GENERACIÓN DE REPORTES";
             this._btnGenerarReportes.UseVisualStyleBackColor = false;
@@ -101,7 +101,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(486, 194);
+            this.pictureBox1.Location = new System.Drawing.Point(605, 320);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(111, 60);
             this.pictureBox1.TabIndex = 9;
@@ -112,7 +112,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(598, 256);
+            this.ClientSize = new System.Drawing.Size(728, 392);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this._btnGenerarReportes);
             this.Controls.Add(this._btnEmpleados);

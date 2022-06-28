@@ -142,7 +142,7 @@
             // lblVolver
             // 
             this.lblVolver.AutoSize = true;
-            this.lblVolver.Location = new System.Drawing.Point(511, 284);
+            this.lblVolver.Location = new System.Drawing.Point(596, 313);
             this.lblVolver.Name = "lblVolver";
             this.lblVolver.Size = new System.Drawing.Size(42, 15);
             this.lblVolver.TabIndex = 10;
@@ -153,9 +153,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(603, 287);
+            this.pictureBox1.Location = new System.Drawing.Point(664, 313);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 74);
+            this.pictureBox1.Size = new System.Drawing.Size(63, 67);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
@@ -164,7 +164,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(689, 366);
+            this.ClientSize = new System.Drawing.Size(728, 392);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblVolver);
             this.Controls.Add(this._btnAltaCategoria);
