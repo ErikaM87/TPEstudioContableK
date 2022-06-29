@@ -51,3 +51,14 @@ C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioCo
 C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.AccesoDatos\obj\Debug\EstudioContable.AccesoDatos.csproj.CopyComplete
 C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.AccesoDatos\obj\Debug\EstudioContable.AccesoDatos.dll
 C:\Users\sartp\Documents\MILI\CAI\TpEstudioContable\TPEstudioContableK\EstudioContable.AccesoDatos\obj\Debug\EstudioContable.AccesoDatos.pdb
+C:\Users\ery_m\Desktop\GITHUB-TP\TPEstudioContableK\EstudioContable.AccesoDatos\bin\Debug\EstudioContable.AccesoDatos.dll
+C:\Users\ery_m\Desktop\GITHUB-TP\TPEstudioContableK\EstudioContable.AccesoDatos\bin\Debug\EstudioContable.AccesoDatos.pdb
+C:\Users\ery_m\Desktop\GITHUB-TP\TPEstudioContableK\EstudioContable.AccesoDatos\bin\Debug\EstudioContable.Entidades.dll
+C:\Users\ery_m\Desktop\GITHUB-TP\TPEstudioContableK\EstudioContable.AccesoDatos\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ery_m\Desktop\GITHUB-TP\TPEstudioContableK\EstudioContable.AccesoDatos\bin\Debug\EstudioContable.Entidades.pdb
+C:\Users\ery_m\Desktop\GITHUB-TP\TPEstudioContableK\EstudioContable.AccesoDatos\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ery_m\Desktop\GITHUB-TP\TPEstudioContableK\EstudioContable.AccesoDatos\obj\Debug\EstudioContable.AccesoDatos.csproj.AssemblyReference.cache
+C:\Users\ery_m\Desktop\GITHUB-TP\TPEstudioContableK\EstudioContable.AccesoDatos\obj\Debug\EstudioContable.AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\ery_m\Desktop\GITHUB-TP\TPEstudioContableK\EstudioContable.AccesoDatos\obj\Debug\EstudioContable.AccesoDatos.csproj.CopyComplete
+C:\Users\ery_m\Desktop\GITHUB-TP\TPEstudioContableK\EstudioContable.AccesoDatos\obj\Debug\EstudioContable.AccesoDatos.dll
+C:\Users\ery_m\Desktop\GITHUB-TP\TPEstudioContableK\EstudioContable.AccesoDatos\obj\Debug\EstudioContable.AccesoDatos.pdb
