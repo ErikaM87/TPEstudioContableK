@@ -292,7 +292,7 @@
             this.Controls.Add(this._btnAltaEmpleado);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FrmEmpleado";
-            this.Text = "Empleados";
+            this.Text = "EMPLEADOS";
             this.Load += new System.EventHandler(this.FrmEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

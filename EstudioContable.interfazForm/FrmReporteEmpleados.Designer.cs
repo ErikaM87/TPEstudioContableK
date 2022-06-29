@@ -33,6 +33,7 @@
             this._lstEmpleados = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +51,7 @@
             // 
             this._lstEmpleados.FormattingEnabled = true;
             this._lstEmpleados.ItemHeight = 15;
-            this._lstEmpleados.Location = new System.Drawing.Point(110, 115);
+            this._lstEmpleados.Location = new System.Drawing.Point(62, 187);
             this._lstEmpleados.Name = "_lstEmpleados";
             this._lstEmpleados.Size = new System.Drawing.Size(464, 274);
             this._lstEmpleados.TabIndex = 2;
@@ -60,7 +61,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 15.75F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(175, 56);
+            this.label1.Location = new System.Drawing.Point(114, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(315, 25);
             this.label1.TabIndex = 3;
@@ -75,12 +76,19 @@
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(469, 1);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 5;
+            // 
             // FrmReporteEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(729, 468);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this._lstEmpleados);
@@ -101,5 +109,6 @@
         private System.Windows.Forms.ListBox _lstEmpleados;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }

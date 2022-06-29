@@ -154,7 +154,7 @@
             this.Controls.Add(this._lstCategorias);
             this.Controls.Add(this._lstEmpresas);
             this.Name = "FrmReportes";
-            this.Text = "FrmReportes";
+            this.Text = "Reportes Estudio Contable K";
             this.Load += new System.EventHandler(this.FrmReportes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

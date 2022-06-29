@@ -33,6 +33,7 @@
             this._lstLiquidaciones = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +52,7 @@
             this._lstLiquidaciones.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lstLiquidaciones.FormattingEnabled = true;
             this._lstLiquidaciones.ItemHeight = 15;
-            this._lstLiquidaciones.Location = new System.Drawing.Point(116, 119);
+            this._lstLiquidaciones.Location = new System.Drawing.Point(50, 178);
             this._lstLiquidaciones.Name = "_lstLiquidaciones";
             this._lstLiquidaciones.Size = new System.Drawing.Size(464, 274);
             this._lstLiquidaciones.TabIndex = 2;
@@ -61,7 +62,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 15.75F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(173, 54);
+            this.label1.Location = new System.Drawing.Point(103, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(341, 25);
             this.label1.TabIndex = 4;
@@ -76,12 +77,19 @@
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
             // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(479, 4);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 7;
+            // 
             // FrmReporteLiquidaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(729, 468);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this._lstLiquidaciones);
@@ -102,5 +110,6 @@
         private System.Windows.Forms.ListBox _lstLiquidaciones;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }

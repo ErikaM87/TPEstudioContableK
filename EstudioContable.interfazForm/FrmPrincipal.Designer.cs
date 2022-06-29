@@ -120,7 +120,7 @@
             this.Controls.Add(this._btnLiquidaciones);
             this.Controls.Add(this._btnCategorias);
             this.Name = "FrmPrincipal";
-            this.Text = "Estudio Contable Krabappel & Asoc.";
+            this.Text = "ESTUDIO CONTABLE KRABAPPEL & ASOC.";
             this.Load += new System.EventHandler(this.FrmPrincipal_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
